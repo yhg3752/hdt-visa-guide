@@ -1,0 +1,76 @@
+/* ============================================================
+   비자 안내 매뉴얼 — 인쇄/내보내기용 플랫 스타일
+   각 슬라이드를 1920×1080 고정 사이즈 블록으로 세로로 배치
+   ============================================================ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: #0a0a0a;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  color: var(--fg-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  gap: 40px;
+}
+
+section.slide {
+  width: 1920px;
+  height: 1080px;
+  background: var(--bg-surface);
+  color: var(--fg-body);
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+/* All other styles inherit from manual.css */
+
+@media print {
+  body {
+    padding: 0;
+    gap: 0;
+    background: #fff;
+  }
+  section.slide {
+    page-break-after: always;
+    box-shadow: none;
+  }
+  @page { size: 1920px 1080px; margin: 0; }
+}
+
+/* ============================================================
+   모바일 — flat 슬라이드(1920×1080)를 화면 폭에 맞춰 축소.
+   flat-scale.js가 .slide마다 --flat-scale 변수를 설정한다.
+   ============================================================ */
+@media (max-width: 768px) {
+  body {
+    padding: 0 !important;
+    gap: 0 !important;
+    align-items: flex-start !important;
+    overflow-x: hidden !important;
+  }
+  section.slide {
+    transform: scale(var(--flat-scale, 0.2));
+    transform-origin: top left;
+    margin: 0 !important;
+    /* 축소된 실제 높이만큼만 자리를 차지하도록 wrapper가 처리 */
+  }
+  /* 각 슬라이드를 감싸는 래퍼: 축소된 높이만큼만 공간 차지 */
+  .flat-slide-wrap {
+    width: 100vw;
+    overflow: hidden;
+    height: var(--flat-wrap-h, auto);
+    border-bottom: 1px solid #222;
+  }
+}

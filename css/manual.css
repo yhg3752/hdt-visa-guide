@@ -1,0 +1,1274 @@
+/* ============================================================
+   비자 안내 매뉴얼 — 슬라이드 공통 스타일
+   현대드림투어 디자인 시스템 기반
+   ============================================================ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: #0a0a0a;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  color: var(--fg-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+deck-stage {
+  --slide-w: 1920;
+  --slide-h: 1080;
+}
+
+deck-stage section {
+  width: 1920px;
+  height: 1080px;
+  background: var(--bg-surface);
+  color: var(--fg-body);
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================
+   슬라이드 공통 — 헤더 / 푸터
+   ============================================================ */
+
+.slide-header {
+  height: 88px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px;
+  background: #fff;
+  border-bottom: 1px solid var(--neutral-100);
+}
+
+.slide-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.slide-header .brand img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+.slide-header .brand .divider {
+  width: 1px;
+  height: 24px;
+  background: var(--neutral-200);
+}
+.slide-header .brand .doc-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--neutral-600);
+  letter-spacing: -0.01em;
+}
+
+.slide-header .meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+  color: var(--neutral-600);
+  letter-spacing: 0.04em;
+}
+.slide-header .meta .country-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  border: 1px solid var(--neutral-200);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--neutral-800);
+  letter-spacing: 0.06em;
+}
+.slide-header .meta .country-chip .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-500);
+}
+
+.slide-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px;
+  font-size: 13px;
+  color: var(--neutral-400);
+  letter-spacing: 0.06em;
+}
+.slide-footer .slogan {
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+.slide-footer .page {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  font-weight: 500;
+  color: var(--neutral-600);
+}
+
+/* ============================================================
+   본문 영역
+   ============================================================ */
+
+.slide-body {
+  flex: 1;
+  padding: 56px 80px 80px;
+  position: relative;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* ============================================================
+   타이포그래피
+   ============================================================ */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--primary-500);
+  text-transform: uppercase;
+}
+.eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--primary-500);
+}
+
+.slide-eyebrow {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--primary-500);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+h1.slide-title {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--fg-heading);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+h2.slide-title {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--fg-heading);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.slide-subtitle {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--neutral-600);
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+  max-width: 1200px;
+}
+
+/* ============================================================
+   STEP 슬라이드
+   ============================================================ */
+
+.step-tag {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.step-tag .label {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--primary-500);
+  text-transform: uppercase;
+}
+.step-tag .num {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--primary-500);
+  font-variant-numeric: tabular-nums;
+}
+.step-tag .of {
+  font-size: 14px;
+  color: var(--neutral-400);
+  font-variant-numeric: tabular-nums;
+}
+
+.step-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(0, 1fr);
+  gap: 56px;
+  align-items: stretch;
+  min-height: 0;
+  flex: 1;
+}
+
+.step-layout.wide-shot {
+  grid-template-columns: 1.4fr 1fr;
+}
+
+.step-layout.tall-shot {
+  grid-template-columns: 0.7fr 1fr;
+}
+
+.step-layout.two-shots {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 36px;
+}
+
+.step-layout.three-shots {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 28px;
+}
+
+.step-head {
+  margin-bottom: 28px;
+}
+.step-head h2 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--fg-heading);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.step-head p {
+  font-size: 18px;
+  color: var(--neutral-600);
+  line-height: 1.55;
+}
+
+/* ============================================================
+   스크린샷 카드
+   ============================================================ */
+
+.shot {
+  background: var(--bg-surface);
+  border: 1px solid var(--neutral-200);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(30, 30, 30, 0.04);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+  max-height: 100%;
+}
+
+.shot.full-bleed {
+  height: 100%;
+}
+
+.shot .shot-frame {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--neutral-100);
+  padding: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+.shot .shot-frame.phone {
+  padding: 24px;
+  background: var(--neutral-100);
+}
+.shot .shot-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  min-height: 0;
+  min-width: 0;
+}
+
+.shot .shot-caption {
+  flex-shrink: 0;
+  padding: 14px 20px;
+  border-top: 1px solid var(--neutral-100);
+  font-size: 14px;
+  color: var(--neutral-600);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.shot .shot-caption .pin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary-500);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   안내 노트 (오른쪽 패널)
+   ============================================================ */
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.note-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.note-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--neutral-800);
+  letter-spacing: -0.005em;
+  word-break: keep-all;
+  min-width: 0;
+}
+.note-list li > * { min-width: 0; }
+.note-list li .num {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--primary-500);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.note-list li .text { flex: 1; min-width: 0; }
+.note-list li b,
+.note-list li strong {
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+/* 점·체크박스 스타일 노트 (서브 항목용) */
+.bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+.bullets li {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--neutral-600);
+  padding-left: 22px;
+  position: relative;
+  word-break: keep-all;
+}
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--neutral-400);
+}
+
+/* ============================================================
+   콜아웃 (유의사항)
+   ============================================================ */
+
+.callout {
+  padding: 20px 24px;
+  border-radius: 12px;
+  background: var(--bg-tint-primary);
+  border-left: 4px solid var(--primary-500);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.callout .callout-title {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--primary-700);
+  text-transform: uppercase;
+}
+.callout p {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--neutral-800);
+}
+
+.callout.warn {
+  background: var(--bg-tint-secondary);
+  border-left-color: var(--secondary-500);
+}
+.callout.warn .callout-title { color: var(--secondary-700); }
+
+/* ============================================================
+   COVER (커버 슬라이드)
+   ============================================================ */
+
+.cover {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: stretch;
+}
+
+.cover-left {
+  padding: 80px 80px 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.cover-left .top { display: flex; flex-direction: column; gap: 32px; }
+
+.cover-eyebrow {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--primary-500);
+  text-transform: uppercase;
+}
+
+.cover-title {
+  font-size: 92px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--fg-heading);
+  line-height: 1.04;
+}
+.cover-title .accent {
+  color: var(--primary-500);
+}
+
+.cover-subtitle {
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--neutral-600);
+  letter-spacing: 0.02em;
+  margin-top: 24px;
+}
+
+.cover-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  border-top: 1px solid var(--neutral-200);
+  padding-top: 32px;
+}
+.cover-meta-grid .label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--neutral-400);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.cover-meta-grid .value {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--neutral-900);
+  letter-spacing: -0.005em;
+  word-break: break-all;
+  line-height: 1.45;
+}
+
+.cover-right {
+  position: relative;
+  background: var(--neutral-900);
+  color: var(--fg-on-dark);
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.cover-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--secondary-500);
+}
+
+.cover-right .country-mark {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  color: var(--secondary-100);
+}
+
+.cover-right .big-code {
+  font-size: 280px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: #fff;
+}
+
+.cover-right .visa-label {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.7);
+  margin-top: 16px;
+}
+
+.cover-right .right-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.cover-right .right-bottom .slogan-en {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--secondary-100);
+}
+.cover-right .right-bottom .slogan-en .light {
+  color: rgba(255,255,255,0.5);
+  margin-left: 8px;
+}
+.cover-right .right-bottom .copyright {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.4);
+  margin-top: 4px;
+}
+
+/* ============================================================
+   목차 / 안내 (overview) 슬라이드
+   ============================================================ */
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 8px;
+}
+
+.info-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--neutral-200);
+  border-radius: 12px;
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.info-card.dark {
+  background: var(--neutral-900);
+  border-color: var(--neutral-900);
+  color: var(--fg-on-dark);
+  position: relative;
+  overflow: hidden;
+}
+.info-card.dark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 60px;
+  background: var(--secondary-500);
+}
+.info-card .card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid var(--neutral-100);
+  padding-bottom: 16px;
+  margin-bottom: 4px;
+}
+.info-card.dark .card-head {
+  border-bottom-color: rgba(255,255,255,0.1);
+}
+.info-card .card-head .icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--bg-tint-primary);
+  color: var(--primary-700);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+.info-card.dark .card-head .icon {
+  background: rgba(202,119,0,0.2);
+  color: var(--secondary-100);
+}
+.info-card .card-head h3 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--fg-heading);
+}
+.info-card.dark .card-head h3 {
+  color: #fff;
+}
+.info-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+.info-card ul li {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--neutral-800);
+  letter-spacing: -0.005em;
+  padding-left: 22px;
+  position: relative;
+  word-break: keep-all;
+  min-width: 0;
+}
+.info-card ul li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-500);
+}
+.info-card.dark ul li {
+  color: rgba(255,255,255,0.85);
+}
+.info-card.dark ul li::before {
+  background: var(--secondary-100);
+}
+
+.info-card ul li b,
+.info-card ul li strong {
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+.info-card.dark ul li b {
+  color: #fff;
+}
+
+/* 단일 컬럼 안내 (긴 목록) */
+.long-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.kv-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 12px 24px;
+  margin-top: 12px;
+}
+.kv-grid .k {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--neutral-600);
+  text-transform: uppercase;
+}
+.kv-grid .v {
+  font-size: 17px;
+  color: var(--neutral-900);
+  font-weight: 500;
+}
+
+/* ============================================================
+   마지막(완료) 슬라이드
+   ============================================================ */
+
+.finish {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  gap: 32px;
+  padding: 0 120px;
+}
+.finish .check {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--primary-500);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.finish h2 {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--fg-heading);
+  line-height: 1.1;
+}
+.finish p {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--neutral-600);
+  line-height: 1.55;
+  max-width: 900px;
+}
+
+/* ============================================================
+   유틸
+   ============================================================ */
+
+.row { display: flex; gap: 16px; align-items: center; }
+.col { display: flex; flex-direction: column; gap: 16px; }
+.spacer { flex: 1; }
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  background: var(--bg-tint-primary);
+  color: var(--primary-700);
+}
+.tag.warn { background: var(--bg-tint-secondary); color: var(--secondary-700); }
+.tag.dark { background: var(--neutral-900); color: #fff; }
+
+/* 강조 inline */
+em.hl { font-style: normal; color: var(--primary-700); font-weight: 600; }
+em.warn { font-style: normal; color: var(--secondary-700); font-weight: 600; }
+
+/* 스크린샷 컨테이너에 따른 비율 처리: 모바일 앱은 비율 유지하며 카드 가운데 정렬 */
+.shot.mobile {
+  background: var(--neutral-100);
+  border-color: var(--neutral-200);
+}
+.shot.mobile .shot-frame {
+  background: var(--neutral-100);
+  padding: 16px;
+}
+
+.shot.desktop .shot-frame {
+  background: #fff;
+}
+
+/* Step grid for 2-image rows */
+.imgs-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  height: 100%;
+}
+.imgs-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  height: 100%;
+}
+
+/* tall-image height limit for portrait phone screenshots */
+.shot.phone-tall {
+  max-height: 100%;
+}
+.shot.phone-tall .shot-frame {
+  background: var(--neutral-100);
+  padding: 20px;
+}
+.shot.phone-tall .shot-frame img {
+  max-height: 780px;
+}
+
+/* section labels in slide title rows */
+.title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.title-row .right-meta {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--neutral-400);
+  text-transform: uppercase;
+}
+
+/* deck-stage overrides */
+deck-stage::part(slide-count),
+deck-stage::part(controls) {
+  font-family: 'Pretendard', sans-serif;
+}
+
+
+/* ============================================================
+   App Store / Play Store mock (Step 1 — AU deck)
+   ============================================================ */
+
+.shot.app-store-mock {
+  background: #fff;
+}
+.shot.app-store-mock .shot-frame {
+  background: #fff;
+  padding: 24px;
+  align-items: stretch;
+  justify-content: stretch;
+  flex-direction: column;
+}
+.app-store-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  background: #fff;
+}
+.app-store-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: #efeff0;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--neutral-800);
+}
+.app-store-search .search-icon {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.app-store-search .query {
+  flex: 1;
+  color: var(--neutral-800);
+}
+.app-store-search .cancel {
+  font-size: 17px;
+  color: #0a84ff;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+.app-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 4px 0;
+}
+.app-icon-image {
+  width: 88px;
+  height: 88px;
+  border-radius: 22px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+}
+.app-meta {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.app-meta .app-name {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--neutral-900);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.app-meta .app-cat {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--neutral-600);
+}
+.install-btn {
+  flex-shrink: 0;
+  padding: 7px 22px;
+  border-radius: 999px;
+  border: none;
+  background: #efeff0;
+  color: #0a84ff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  letter-spacing: -0.005em;
+}
+.app-sub {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--neutral-600);
+  padding: 0 2px;
+  flex-wrap: wrap;
+}
+.app-sub .rating {
+  color: var(--neutral-800);
+  font-weight: 500;
+}
+.app-sub .sub-divider {
+  width: 1px;
+  height: 12px;
+  background: var(--neutral-200);
+}
+.app-sub .publisher {
+  font-size: 13px;
+  color: var(--neutral-600);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.app-sub .plane {
+  font-size: 13px;
+  color: var(--neutral-600);
+  white-space: nowrap;
+}
+.app-screens {
+  margin-top: 8px;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  min-height: 0;
+  overflow: hidden;
+}
+.screen-thumb {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--neutral-100);
+  border: 1px solid var(--neutral-200);
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  min-height: 0;
+}
+.screen-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+
+/* ============================================================
+   Inset card — small floating screenshot with label
+   (Used for "영문 주소 검색 방법" callout)
+   ============================================================ */
+.inset-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  background: var(--bg-tint-primary);
+  border: 1px solid var(--primary-100);
+  border-radius: 10px;
+  align-self: flex-end;
+  max-width: 320px;
+}
+.inset-card .inset-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--primary-700);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.inset-card .inset-label::before {
+  content: "🔍";
+  font-size: 12px;
+}
+.inset-card .inset-img {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--neutral-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 220px;
+}
+.inset-card .inset-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+/* ============================================================
+   Cover — clickable application site URL
+   ============================================================ */
+.cover-link-row { line-height: 1.4; }
+.cover-link {
+  color: var(--neutral-900);
+  text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 6px;
+  transition: color 160ms ease-out;
+}
+.cover-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.25;
+  transition: opacity 160ms ease-out;
+}
+.cover-link:hover {
+  color: var(--primary-700);
+}
+.cover-link:hover::after {
+  opacity: 0.6;
+}
+.cover-link .ext-arrow {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--primary-500);
+  margin-top: 2px;
+  flex-shrink: 0;
+  letter-spacing: 0;
+}
+
+
+/* ============================================================
+   Inset overlay — floats inside .shot-frame top-right corner
+   (Used for "영문 주소 검색 방법" callout on US slide 6)
+   ============================================================ */
+.shot-frame { position: relative; }
+.inset-card.inset-overlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  margin: 0;
+  max-width: 280px;
+  align-self: auto;
+  background: rgba(232, 245, 242, 0.96);
+  border: 1px solid var(--primary-100);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 4px 16px rgba(30, 30, 30, 0.12), 0 1px 3px rgba(30, 30, 30, 0.08);
+}
+.inset-card.inset-overlay .inset-img { max-height: 180px; }
+
+/* ============================================================
+   Single-column step layout (text-only step)
+   ============================================================ */
+.step-layout.single-col {
+  grid-template-columns: 1fr;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.step-layout.single-col .notes { padding-top: 24px; }
+.step-layout.single-col .note-list li { font-size: 22px; }
+
+
+/* ============================================================
+   Stacked screenshots — multiple images vertically in one card
+   (Used for US slide 4 — passport upload + review flow)
+   ============================================================ */
+.shot.shot-stack {
+  background: var(--neutral-100);
+}
+.shot.shot-stack .shot-frame.shot-frame-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 12px;
+  gap: 10px;
+  background: var(--neutral-100);
+}
+.shot.shot-stack .shot-frame.shot-frame-stack img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  display: block;
+  flex: 1 1 0;
+  min-height: 0;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid var(--neutral-200);
+  padding: 4px;
+}
+
+
+/* ============================================================
+   UK consolidated overview — 3-column compact card grid
+   ============================================================ */
+.overview-grid.uk-overview-3col {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 20px;
+}
+.uk-overview-3col .info-card {
+  padding: 22px 24px;
+  gap: 10px;
+}
+.uk-overview-3col .info-card .card-head {
+  padding-bottom: 12px;
+  margin-bottom: 2px;
+}
+.uk-overview-3col .info-card .card-head h3 { font-size: 19px; }
+.uk-overview-3col .info-card ul { gap: 8px; }
+.uk-overview-3col .info-card ul li { font-size: 15px; line-height: 1.45; padding-left: 18px; }
+.uk-overview-3col .info-card ul li::before { top: 8px; width: 5px; height: 5px; }
+.uk-overview-3col .info-card .kv-grid .k { font-size: 12px; }
+.uk-overview-3col .info-card .kv-grid .v { font-size: 14px; }
+.uk-overview-3col .callout { padding: 12px 16px; }
+.uk-overview-3col .callout .callout-title { font-size: 13px; }
+.uk-overview-3col .callout p { font-size: 14px; line-height: 1.45; }
+
+
+/* ============================================================
+   US consolidated overview — 3 cards top + 1 wide notes card
+   ============================================================ */
+.us-overview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 24px;
+}
+.us-overview .info-card {
+  padding: 28px 30px;
+  gap: 12px;
+}
+.us-overview .info-card .card-head { padding-bottom: 14px; }
+.us-overview .info-card .card-head h3 { font-size: 21px; }
+.us-overview .info-card ul { gap: 10px; }
+.us-overview .info-card ul li { font-size: 16px; line-height: 1.5; padding-left: 20px; }
+.us-overview .info-card ul li::before { top: 9px; width: 6px; height: 6px; }
+.us-overview .info-card .kv-grid .k { font-size: 13px; }
+.us-overview .info-card .kv-grid .v { font-size: 16px; }
+.us-overview .us-notes-wide {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+.us-overview .us-notes-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px 40px;
+}
+
+
+/* ============================================================
+   Four screenshot columns + notes
+   ============================================================ */
+.step-layout.four-shots {
+  grid-template-columns: repeat(4, 1fr) 1.1fr;
+}
+
+
+/* ============================================================
+   모바일 — deck-stage 슬라이드 뷰어는 scale로 자동 맞춤되므로
+   슬라이드 내부(::slotted) 구조는 절대 건드리지 않는다.
+   레일 제거는 no-rail 어트리뷰트 + deck-mobile-init.js가 담당.
+   여기서는 deck-stage가 정의되기 전 깜빡임만 방지.
+   ============================================================ */
+deck-stage:not(:defined) { display:block; position:fixed; inset:0; background:#000; }
+
+
+/* ============================================================
+   모바일 — deck.html을 세로 스크롤로 재배치 (deck-mobile-init.js)
+   slotted 슬라이드 내부는 절대 수정하지 않고, 1920×1080 슬라이드를
+   화면 너비에 맞춰 통째로 scale만 한다.
+   ============================================================ */
+@media (max-width: 768px) {
+  #mobile-deck-scroll {
+    width: 100vw;
+    background: #0a0a0a;
+    overflow-x: hidden;
+  }
+  #mobile-deck-scroll .flat-slide-wrap {
+    width: 100vw;
+    height: var(--flat-wrap-h, auto);
+    overflow: hidden;
+    border-bottom: 1px solid #222;
+  }
+  /* deck.html의 section은 deck-stage 안에서 position:absolute였지만
+     꺼낸 뒤에는 일반 블록으로 1920×1080 고정 + scale */
+  #mobile-deck-scroll section.slide {
+    position: relative !important;
+    width: 1920px !important;
+    height: 1080px !important;
+    inset: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transform: scale(var(--flat-scale, 0.2));
+    transform-origin: top left;
+    background: var(--bg-surface);
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,1248 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>영국 ETA 신청 매뉴얼 · 현대드림투어</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../css/design-system.css">
+<link rel="stylesheet" href="../css/manual.css">
+<link rel="stylesheet" href="../css/print.css">
+<link rel="stylesheet" href="../css/export-toolbar.css">
+<style>
+  /* UK 데크 한정 — 화면 사이즈가 다양해 일부 슬라이드에 미세 보정 */
+  .uk-shot-wrap { display:flex; align-items:center; justify-content:center; height:100%; }
+  .uk-shot-wrap img { max-width:100%; max-height:820px; }
+</style>
+<script>
+window.focusSlide = function(n) {
+  const slides = document.querySelectorAll('section.slide');
+  slides.forEach((s, i) => { s.style.display = i === n ? '' : 'none'; });
+  document.body.style.padding = '0'; document.body.style.gap = '0'; document.body.style.background = '#fff';
+};
+window.showAllSlides = function() { document.querySelectorAll('section.slide').forEach(s => { s.style.display = ''; }); };
+</script>
+
+</head>
+<body>
+
+
+<div class="flat-deck">
+
+<!-- ============== 01 · COVER ============== -->
+<section class="slide" data-label="Cover">
+  <div class="cover">
+    <div class="cover-left">
+      <div class="top">
+        <div class="brand-row">
+          <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어" style="height:56px">
+        </div>
+        <div>
+          <div class="cover-eyebrow">VISA APPLICATION GUIDE</div>
+          <h1 class="cover-title">영국 ETA<br><span class="accent">신청 매뉴얼</span></h1>
+          <p class="cover-subtitle">UK ETA Application Manual</p>
+        </div>
+      </div>
+      <div class="cover-meta-grid">
+        <div>
+          <div class="label">신청 사이트</div>
+          <div class="value cover-link-row" style="font-size:15px"><a href="https://apply-for-an-eta.homeoffice.gov.uk/apply/electronic-travel-authorisation/how-to-apply" target="_blank" rel="noopener" class="cover-link">apply-for-an-eta.<br>homeoffice.gov.uk<span class="ext-arrow">↗</span></a></div>
+        </div>
+        <div>
+          <div class="label">최종 업데이트</div>
+          <div class="value">2026. 06. 01.</div>
+        </div>
+      </div>
+    </div>
+    <div class="cover-right">
+      <div class="country-mark">UNITED KINGDOM</div>
+      <div>
+        <div class="big-code">UK</div>
+        <div class="visa-label">Electronic Travel Authorisation</div>
+      </div>
+      <div class="right-bottom">
+        <div class="slogan-en">For Your Better Value<span class="light">· HYUNDAI DREAM TOUR</span></div><div class="copyright">ⓒ HYUNDAI DREAMTOUR SALES 2 All rights reserved.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-label="영국 ETA 신청 전 안내">
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="slide-eyebrow">01 · Overview</div>
+    <h1 class="slide-title">영국 ETA <span style="color:var(--primary-500)">신청 전 안내</span></h1>
+    <p class="slide-subtitle">신청 전 반드시 확인해야 하는 ETA 안내 사항입니다.</p>
+
+    <div class="overview-grid uk-overview-3col" style="margin-top:28px;">
+      <div class="info-card">
+        <div class="card-head"><div class="icon">?</div><h3>영국 ETA란?</h3></div>
+        <div class="kv-grid" style="grid-template-columns:84px 1fr; gap:6px 14px;">
+          <div class="k">NAME</div><div class="v"><b>E</b>lectronic <b>T</b>ravel <b>A</b>uthorization</div>
+          <div class="k">도입</div><div class="v">2025년 1월 8일</div>
+          <div class="k">개념</div><div class="v">미국 ESTA와 동일</div>
+        </div>
+        <ul style="margin-top:12px">
+          <li>한국 등 비자 면제국 국민이 영국 입국 시 <b>반드시 소지</b>해야 하는 전자 문서</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="card-head"><div class="icon">人</div><h3>신청 대상</h3></div>
+        <ul>
+          <li><b>6개월 미만 체류</b> 방문자 — 관광 · 단기 학업 · 비즈니스 · 가족 방문</li>
+          <li>승인 후 <b>유효기간 2년</b> · 한 번에 최대 <b>6개월</b> 체류</li>
+          <li>2년간 <b>복수 입국 허가</b> · 영국 경유 시에도 필요</li>
+        </ul>
+        <div class="callout" style="margin-top:10px">
+          <div class="callout-title">ETA 불필요</div>
+          <p style="font-size:15px">유효한 영국 비자 / 영국·아일랜드 시민권 / 영국 영주권 소지자</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="card-head"><div class="icon">→</div><h3>신청 방법</h3></div>
+        <ul>
+          <li>공식 신청 사이트 접속 후 단계별 양식 작성</li>
+          <li>여권 사진 → 본인 얼굴 사진 업로드</li>
+          <li>개인 정보 및 질의응답 입력</li>
+          <li>신청 비용 결제 후 승인 메일 수신</li>
+        </ul>
+        <div class="callout warn" style="margin-top:10px">
+          <p style="font-size:15px">※ 어플은 오류가 잦아 <em class="warn">웹사이트 신청 권장</em></p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="card-head"><div class="icon">📁</div><h3>준비물</h3></div>
+        <ul>
+          <li>유효한 <b>여권</b> 및 <b>여권 스캔본 파일</b></li>
+          <li>증명사진 파일 — <b>600픽셀 이상</b></li>
+          <li>사용 가능한 <b>이메일 주소</b></li>
+          <li>결제 수단 — 신용/체크카드, Apple Pay 또는 Google Pay</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="card-head"><div class="icon">⏱</div><h3>비용 · 처리 기간</h3></div>
+        <div class="kv-grid" style="grid-template-columns:84px 1fr; gap:6px 14px;">
+          <div class="k">비용</div><div class="v"><b>£20</b> (약 40,000원)</div>
+          <div class="k">처리</div><div class="v">영업일 <b>3일 이내</b> 승인</div>
+        </div>
+        <ul style="margin-top:12px">
+          <li>추가 심사 필요 시 <b>최대 1주일</b> 소요</li>
+          <li>여유 있게 <b>출발 2주 전 신청</b> 권장</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="card-head"><div class="icon">!</div><h3>신청 시 유의사항</h3></div>
+        <ul>
+          <li>여행 <b>최소 4일 전</b>까지 신청 권장 (출발 2주 전 추천)</li>
+          <li>여권 <b>유효기간 6개월 이상</b> 확인</li>
+          <li>여권 정보 변경 시 <em class="hl">새 ETA 신청 필요</em></li>
+          <li>결제 완료 후 <b>수정 · 환불 불가</b></li>
+          <li>이동 방법과 관계없이 영국 입국 시 ETA 필요</li>
+          <li>신청은 <b>20분 이내 완료</b> <em class="warn">(진행 저장 불가)</em></li>
+          <li>만 <b>9세 이하</b>는 얼굴 스캔 생략</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">02 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 1 · 신청 시작 페이지에서 'Continue' 클릭">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">01</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>신청 시작 페이지에서 'Continue' 클릭</h2>
+        <p>영국 정부 ETA 신청 공식 페이지에 접속하여 신청을 시작합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image5.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>공식 신청 사이트에 접속하면 'How to apply'와 'Before you apply' 안내가 표시됩니다.</span></li>
+            <li><span class="num">2</span><span>안내 내용을 확인한 후 <b>'Continue'</b> 버튼을 클릭해 신청을 시작합니다.</span></li>
+            <li><span class="num">3</span><span>신청은 한 번에 완료해야 하며, 20분간 작업이 없으면 세션이 만료됩니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">03 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 2 · 보안 코드 받을 이메일 주소 입력">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">02</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>보안 코드 받을 이메일 주소 입력</h2>
+        <p>신청 진행에 필요한 보안 코드를 받을 이메일 주소를 입력합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image6.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>보안 코드를 수신할 <b>이메일 주소</b>를 입력합니다.</span></li>
+            <li><span class="num">2</span><span>이메일 입력 후 'Continue'를 클릭하면 해당 메일로 6자리 보안 코드가 발송됩니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">04 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 3 · 이메일에서 보안 코드 확인">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">03</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>이메일에서 보안 코드 확인</h2>
+        <p>입력한 이메일 받은편지함에서 보안 코드를 확인합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image7.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>이메일 받은편지함을 확인하여 발송된 <b>6자리 보안 코드</b>를 확인합니다.</span></li>
+            <li><span class="num">2</span><span>보안 코드 번호를 메모하거나 복사해 둡니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">05 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 4 · 신청 사이트로 돌아와 보안 코드 입력">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">04</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>신청 사이트로 돌아와 보안 코드 입력</h2>
+        <p>받은 보안 코드를 신청 페이지에 입력합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image8.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>신청 페이지로 돌아와 메일로 받은 <b>6자리 보안 코드</b>를 입력합니다.</span></li>
+            <li><span class="num">2</span><span>보안 코드는 <em class='warn'>10분간 유효</em>합니다.</span></li>
+            <li><span class="num">3</span><span>10분이 지난 경우 <b>'Resend security code'</b>를 눌러 새 코드를 받습니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">06 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 5 · 여권 사진 업로드 안내 확인">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">05</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>여권 사진 업로드 안내 확인</h2>
+        <p>여권 사진 업로드에 앞서 사진 요건을 확인합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image9.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>여권 개인정보 페이지의 4개 모서리, 인적 사항, 사진, MRZ가 모두 보이는 사진이어야 합니다.</span></li>
+            <li><span class="num">2</span><span><b>빛 반사나 빛 번짐 없이</b> 선명한 사진을 준비합니다.</span></li>
+            <li><span class="num">3</span><span><b>스캔기로 깔끔하게 스캔</b>한 사진을 권장합니다.</span></li>
+            <li><span class="num">4</span><span>안내 사항을 확인한 후 'Continue'를 클릭합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">07 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 6 · 여권 사진 업로드">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">06</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>여권 사진 업로드</h2>
+        <p>준비한 여권 사진 파일을 업로드합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout wide-shot" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image10.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span><b>Choose file</b> 버튼을 클릭한 후 업로드할 여권 사진 파일을 선택합니다.</span></li>
+            <li><span class="num">2</span><span><b>'No file chosen'</b> 문구 자리에 업로드한 파일명이 표시되면 업로드 완료입니다.</span></li>
+            <li><span class="num">3</span><span>확인 후 'Continue' 버튼을 클릭합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">08 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 7 · 업로드한 여권 이미지 확인">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">07</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>업로드한 여권 이미지 확인</h2>
+        <p>업로드된 이미지가 올바른지 확인합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image11.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>업로드한 여권 이미지가 깔끔하게 보이는지 확인합니다.</span></li>
+            <li><span class="num">2</span><span>이미지에 문제가 없으면 'Continue'를 클릭합니다.</span></li>
+            <li><span class="num">3</span><span>다른 사진으로 교체하려면 'Upload a different photo'를 선택합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">09 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 8 · 여권 정보 자동 인식 결과 확인">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">08</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>여권 정보 자동 인식 결과 확인</h2>
+        <p>여권에서 자동으로 인식된 정보가 정확한지 확인합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout tall-shot" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image13.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>자동으로 채워진 다음 항목들을 <em class='hl'>여권과 동일한지 반드시 확인</em>합니다.</span></li>
+            <li><span class="num">2</span><span><b>영문 이름 · 여권번호 · 만료 기한 · 생년월일 · 국적 · 여권발급 국가</b></span></li>
+            <li><span class="num">3</span><span>오인식이 있는 경우 <b>'Change'</b>를 눌러 직접 수정합니다.</span></li>
+            <li><span class="num">4</span><span>확인 후 'Continue'를 클릭합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">10 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 9 · 얼굴 사진 업로드 — PC 신청 시">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">09</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>얼굴 사진 업로드 — PC 신청 시</h2>
+        <p>PC로 신청하는 경우 얼굴 스캔 단계는 건너뜁니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image14.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>일반 PC에서 신청 중인 경우 <b>'Skip this step'</b>을 클릭합니다.</span></li>
+            <li><span class="num">2</span><span><em class='warn'>'Continue' 버튼을 누르지 마세요.</em></span></li>
+            <li><span class="num">3</span><span>실수로 눌렀다면 카메라 없음 안내문이 나타나며, <b>'Continue without scanning your face'</b>를 클릭합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">11 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 10 · 얼굴 사진 업로드 — 사진 요건">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">10</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>얼굴 사진 업로드 — 사진 요건</h2>
+        <p>업로드할 얼굴 사진의 요건을 확인합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout tall-shot" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image15.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>깔끔한 <b>흰색 배경</b> 사진</span></li>
+            <li><span class="num">2</span><span><b>배경에 사물이나 물건이 없는</b> 사진</span></li>
+            <li><span class="num">3</span><span><b>머리와 어깨, 상체</b>가 정면으로 반영된 사진</span></li>
+            <li><span class="num">4</span><span><b>그림자와 빛 반사가 없는</b> 사진</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">12 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 11 · 얼굴 사진 업로드">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">11</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>얼굴 사진 업로드</h2>
+        <p>준비한 얼굴 사진 파일을 업로드합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image16.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span><b>'Choose file'</b> 클릭 후 업로드할 얼굴 사진 파일을 선택합니다.</span></li>
+            <li><span class="num">2</span><span><b>'No file chosen'</b> 문구 자리에 업로드한 파일명이 표시되면 완료입니다.</span></li>
+            <li><span class="num">3</span><span>확인 후 'Continue'를 클릭합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">13 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 12 · 업로드한 얼굴 사진 확인">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">12</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>업로드한 얼굴 사진 확인</h2>
+        <p>업로드된 얼굴 사진을 검토합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout wide-shot" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image17.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>업로드한 얼굴 사진을 확인합니다.</span></li>
+            <li><span class="num">2</span><span>현재 사진으로 진행하려면 'Continue'를 클릭합니다.</span></li>
+            <li><span class="num">3</span><span>다른 사진으로 교체하려면 'Upload a different photo' 클릭 후 재진행합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">14 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 13 · 개인 정보 입력 — 주 체류지역 선택">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">13</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>개인 정보 입력 — 주 체류지역 선택</h2>
+        <p>여행 중 주로 체류할 지역을 선택합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image18.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>어디에서 주로 체류할지 체크합니다.</span></li>
+            <li><span class="num">2</span><span><b>주로 영국에서 체류하기에 'United Kingdom'에 체크</b>합니다.</span></li>
+            <li><span class="num">3</span><span>선택 후 'Continue'를 클릭합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">15 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 14 · 개인 정보 입력 — 휴대폰 번호">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">14</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>개인 정보 입력 — 휴대폰 번호</h2>
+        <p>연락 가능한 휴대폰 번호를 국가 코드와 함께 입력합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image19.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>휴대폰 번호에서 <b>첫번째 0을 빼고</b> 국가 번호 <b>+82</b>를 붙여 입력합니다.</span></li>
+            <li><span class="num">2</span><span>예시) 010-1234-5678 → <b>+821012345678</b></span></li>
+            <li><span class="num">3</span><span>입력 후 'Continue'를 클릭합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">16 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 15 · 집 주소 입력 (영문)">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">15</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>집 주소 입력 (영문)</h2>
+        <p>자택 주소를 영문으로 정확히 기입합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image20.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span><b>자택 영문 주소</b>를 필수 기입합니다.<br>예시) HYUNDAI RO, SEOCHO GU, SEOUL, REPUBLIC OF KOREA</span></li>
+            <li><span class="num">2</span><span><b>도시명</b> 기입 — 예시) SEOUL, SEONGNAM</span></li>
+            <li><span class="num">3</span><span><b>국가</b> 기입 — 예시) SOUTH KOREA</span></li>
+            <li><span class="num">4</span><span>입력 후 'Continue'를 클릭합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">17 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 16 · 추가 질문 — 국적 · 직업">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">16</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>추가 질문 — 국적 · 직업</h2>
+        <p>추가 국적 보유 여부와 직업 정보를 입력합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout two-shots" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image21.png" alt="">
+          </div>
+        </div>
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image22.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>질문) 한국 국적 외 다른 국적이 있나요?</span></li>
+            <li><span class="num">2</span><span>질문) 직업이 있습니까?</span></li>
+            <li><span class="num">3</span><span>직업이 있으면 <b>'Yes'</b> 체크 후 하단에 직업을 입력합니다.</span></li>
+            <li><span class="num">4</span><span>선택 후 'Continue'를 클릭합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">18 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 17 · 추가 질문 — 범죄 이력">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">17</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>추가 질문 — 범죄 이력</h2>
+        <p>범죄 관련 질문에 답변합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout two-shots" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image23.png" alt="">
+          </div>
+        </div>
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image24.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>질문) 형사 유죄 판결을 받은 적 있습니까?</span></li>
+            <li><span class="num">2</span><span>질문) 다음 중 하나에 연루되었거나 의심받은 적 있습니까?</span></li>
+            <li><span class="num">3</span><span>해당 사항을 선택한 후 'Continue'를 클릭합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">19 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 18 · 입력 내용 최종 확인">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">18</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>입력 내용 최종 확인</h2>
+        <p>지금까지 입력한 내용을 최종 검토합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout tall-shot" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image25.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>지금까지 입력 / 답변한 내용을 <em class='hl'>최종 확인</em>하는 단계입니다.</span></li>
+            <li><span class="num">2</span><span>신청자 영문 이름, 여권 정보, 답변 등을 꼼꼼히 검토합니다.</span></li>
+            <li><span class="num">3</span><span>틀린 내용이 있다면 <b>'Change'</b> 클릭 후 수정합니다.</span></li>
+            <li><span class="num">4</span><span>확인 후 'Continue'를 클릭합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">20 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 19 · 정보 정확성 확인 동의">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">19</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>정보 정확성 확인 동의</h2>
+        <p>제공한 정보가 정확함을 최종 확인합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image26.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>귀하가 제공한 정보가 정확함을 확인하는 단계입니다.</span></li>
+            <li><span class="num">2</span><span>허위 정보를 제공한 경우 다음 불이익이 발생할 수 있습니다.</span></li>
+            <li><span class="num">3</span><span><b>신청서 거부 · 기소 · 영국에서 추방</b></span></li>
+            <li><span class="num">4</span><span>다른 사람을 대신하여 신청하는 경우, 신청서가 완전하고 정확함을 해당 사람에게 확인해야 합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">21 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 20 · 신청 국가 입력">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">20</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>신청 국가 입력</h2>
+        <p>신청을 진행하는 국가를 입력합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image27.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>질문) 어느 나라에서 신청하시나요?</span></li>
+            <li><span class="num">2</span><span><b>SOUTH KOREA</b>를 입력합니다.</span></li>
+            <li><span class="num">3</span><span>입력 후 'Continue'를 클릭합니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">22 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 21 · 신청 비용 확인">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">21</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>신청 비용 확인</h2>
+        <p>한국에서 신청 시 결제 비용을 확인합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image28.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>한국에서 신청하므로 <b>미국 달러(USD)</b>로 신청 비용을 지불합니다.</span></li>
+            <li><span class="num">2</span><span>신청 비용에는 <b>환전 수수료가 포함</b>되어 있습니다.</span></li>
+            <li><span class="num">3</span><span>영국 ETA 신청 비용은 영국 파운드화로 <b>10파운드</b>이지만, 한국에서 신청 시 USD로 환산한 금액으로 결제됩니다.</span></li>
+            <li><span class="num">4</span><span>신청 시점의 환율에 따라 USD 환산 금액이 다를 수 있습니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">23 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 22 · 결제 정보 입력">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">22</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>결제 정보 입력</h2>
+        <p>카드 결제 정보를 입력합니다. (결제 후 환불 불가)</p>
+      </div>
+    </div>
+    <div class="step-layout tall-shot" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image29.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span><b>카드 소유주 영문 이름</b></span></li>
+            <li><span class="num">2</span><span><b>카드 번호</b></span></li>
+            <li><span class="num">3</span><span><b>카드 만료일</b></span></li>
+            <li><span class="num">4</span><span><b>카드 뒷자리 3자리 보안번호 (CVC)</b></span></li>
+            <li><span class="num">5</span><span><em class='warn'>※ 신청 비용은 환불 불가합니다.</em></span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">24 / 25</span>
+  </div>
+</section>
+
+<section class="slide" data-label="Step 23 · 결제 완료 및 승인 메일 수신">
+  
+  <div class="slide-header">
+    <div class="brand">
+      <img src="../assets/brand/logo-horizontal.png" alt="현대드림투어">
+      <span class="divider"></span>
+      <span class="doc-title">영국 ETA 신청 매뉴얼</span>
+    </div>
+    <div class="meta">
+      <span class="country-chip"><span class="dot"></span>UNITED KINGDOM · UK</span>
+    </div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; padding-bottom:80px;">
+    <div>
+      <div class="step-tag">
+        <span class="label">Step</span>
+        <span class="num">23</span>
+        <span class="of">/ 23</span>
+      </div>
+      <div class="step-head">
+        <h2>결제 완료 및 승인 메일 수신</h2>
+        <p>결제 완료 후 승인 메일을 확인합니다.</p>
+      </div>
+    </div>
+    <div class="step-layout" style="flex:1; min-height:0;">
+        <div class="shot desktop">
+          <div class="shot-frame">
+            <img src="../assets/uk/image30.png" alt="">
+          </div>
+        </div>
+        <div class="notes">
+          <ol class="note-list">
+            <li><span class="num">1</span><span>결제 완료 후 메일로 <b>승인 신청 회신 메일</b>이 도착하는지 확인합니다.</span></li>
+            <li><span class="num">2</span><span>결제 완료 후 기재한 이메일로 <b>영업일 기준 3일 이내</b> ETA 승인 메일이 전송됩니다.</span></li>
+            <li><span class="num">3</span><span>ETA 승인 완료 메일을 보관해 두시기 바랍니다.</span></li>
+          </ol>
+        </div>
+    </div>
+  </div>
+  
+  <div class="slide-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="page">25 / 25</span>
+  </div>
+</section>
+
+</div>
+
+
+<script src="../js/flat-scale.js"></script>
+<script src="../js/export-toolbar.js"></script>
+</body>
+</html>
