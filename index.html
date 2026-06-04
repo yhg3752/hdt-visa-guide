@@ -167,6 +167,14 @@
     text-transform: uppercase;
     margin-bottom: 8px;
   }
+  .card .big-code img.flag {
+    display: block;
+    width: 132px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(30,30,30,0.18);
+    outline: 1px solid rgba(30,30,30,0.06);
+  }
   .card .big-code {
     grid-column: 2;
     grid-row: 1 / span 2;
@@ -177,23 +185,6 @@
     color: var(--neutral-900);
     align-self: center;
     justify-self: end;
-  }
-
-  /* 국기 이미지 */
-  .card .big-code .flag-img {
-    display: block;
-    width: 132px;
-    height: auto;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(30, 30, 30, 0.12);
-    border: 1px solid var(--neutral-100);
-  }
-  .card.dark .big-code .flag-img {
-    width: 188px;
-    border-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
   }
   .card h3 {
     grid-column: 1;
@@ -340,48 +331,24 @@
     color: var(--neutral-600);
     letter-spacing: 0.08em;
   }
-
-  /* ── 모바일 반응형 ─────────────────────────────── */
   @media (max-width: 768px) {
     .page { padding: 32px 20px 72px; }
-    .topbar { padding-bottom: 28px; margin-bottom: 32px; flex-wrap: wrap; gap: 12px; }
-    .topbar img { height: 36px; }
-    .topbar .meta { font-size: 12px; padding: 6px 12px; }
-    .hero { gap: 14px; padding-bottom: 20px; margin-bottom: 36px; }
-    .hero h1 { font-size: 32px; letter-spacing: -0.025em; line-height: 1.15; }
-    .hero .eyebrow { font-size: 11px; letter-spacing: 0.12em; }
-    .hero .dept { font-size: 14px; align-self: flex-start; }
-    .section-head { margin-bottom: 20px; }
-    .section-head h2 { font-size: 18px; }
-    .section-head .label { font-size: 11px; }
+    .hero { padding-bottom: 28px; margin-bottom: 36px; }
+    .hero h1 { font-size: 32px; line-height: 1.15; }
     .grid { grid-template-columns: 1fr; gap: 16px; }
-    .card { padding: 24px 20px; column-gap: 16px; }
-    .card.card-wide, .card[style*="grid-column"] { grid-column: 1 !important; }
-    .card .big-code { font-size: 52px; }
-    .card .big-code .flag-img { width: 88px; }
-    .card.dark .big-code .flag-img { width: 110px; }
-    .card.dark .big-code { font-size: 68px; }
-    .card h3 { font-size: 20px; }
-    .card .country-mark { font-size: 11px; letter-spacing: 0.14em; margin-bottom: 6px; }
-    .card .visa-en { font-size: 13px; }
-    .card .footer-row { margin-top: 20px; padding-top: 16px; flex-direction: column; align-items: flex-start; gap: 14px; }
-    .card .footer-row .left { gap: 20px; flex-wrap: wrap; }
-    .card .footer-row .kv .k { font-size: 10px; }
-    .card .footer-row .kv .v { font-size: 13px; }
-    .card .actions { gap: 8px; margin-top: 12px; }
-    .card .actions a { padding: 10px 16px; font-size: 13px; flex: 1; justify-content: center; min-height: 44px; }
-    footer.page-footer { margin-top: 56px; padding-top: 28px; flex-direction: column; gap: 8px; }
+    .card { padding: 24px 20px; }
+    .card[style*="grid-column"] { grid-column: 1 !important; }
+    .card .big-code { position: static; margin-bottom: 8px; }
+    .card .big-code img.flag { width: 96px; }
+    .card .footer-row { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .card .footer-row .left { flex-wrap: wrap; gap: 16px 28px; }
+    .card .footer-row .cta { min-height: 44px; align-items: center; }
+    footer.page-footer { flex-direction: column; gap: 12px; align-items: flex-start; }
     footer.page-footer .footer-credit { text-align: left; }
   }
   @media (max-width: 480px) {
-    .page { padding: 24px 16px 60px; }
     .hero h1 { font-size: 26px; }
-    .card .big-code { font-size: 42px; }
-    .card .big-code .flag-img { width: 72px; }
-    .card.dark .big-code .flag-img { width: 88px; }
-    .card h3 { font-size: 18px; }
   }
-
 </style>
 </head>
 <body>
@@ -411,7 +378,7 @@
     <div class="card">
       <div class="country-mark">AUSTRALIA</div>
       <h3>호주 ETA 신청 매뉴얼</h3>
-      <div class="big-code"><img src="assets/flags/au.svg" alt="호주 국기" class="flag-img"></div>
+      <div class="big-code"><img class="flag" src="assets/flags/au.svg" alt="호주 국기"></div>
       <div class="visa-en">Australia Electronic Travel Authority</div>
       <div class="footer-row">
         <div class="left">
@@ -429,7 +396,7 @@
     <div class="card">
       <div class="country-mark">NEW ZEALAND</div>
       <h3>뉴질랜드 NZeTA 신청 매뉴얼</h3>
-      <div class="big-code"><img src="assets/flags/nz.svg" alt="뉴질랜드 국기" class="flag-img"></div>
+      <div class="big-code"><img class="flag" src="assets/flags/nz.svg" alt="뉴질랜드 국기"></div>
       <div class="visa-en">New Zealand Electronic Travel Authority</div>
       <div class="footer-row">
         <div class="left">
@@ -447,7 +414,7 @@
     <div class="card">
       <div class="country-mark">UNITED KINGDOM</div>
       <h3>영국 ETA 신청 매뉴얼</h3>
-      <div class="big-code"><img src="assets/flags/gb.svg" alt="영국 국기" class="flag-img"></div>
+      <div class="big-code"><img class="flag" src="assets/flags/uk.svg" alt="영국 국기"></div>
       <div class="visa-en">UK Electronic Travel Authorisation</div>
       <div class="footer-row">
         <div class="left">
@@ -465,7 +432,7 @@
     <div class="card">
       <div class="country-mark">CANADA</div>
       <h3>캐나다 eTA 신청 매뉴얼</h3>
-      <div class="big-code"><img src="assets/flags/ca.svg" alt="캐나다 국기" class="flag-img"></div>
+      <div class="big-code"><img class="flag" src="assets/flags/ca.png" alt="캐나다 국기"></div>
       <div class="visa-en">Canada Electronic Travel Authorization</div>
       <div class="footer-row">
         <div class="left">
@@ -483,7 +450,7 @@
     <div class="card" style="grid-column: 1 / -1;">
       <div class="country-mark">UNITED STATES</div>
       <h3>미국 ESTA 신청 매뉴얼</h3>
-      <div class="big-code"><img src="assets/flags/us.svg" alt="미국 국기" class="flag-img"></div>
+      <div class="big-code"><img class="flag" src="assets/flags/us.svg" alt="미국 국기"></div>
       <div class="visa-en">Electronic System for Travel Authorization</div>
       <div class="footer-row">
         <div class="left">

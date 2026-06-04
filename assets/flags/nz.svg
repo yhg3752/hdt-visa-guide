@@ -1,36 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-nz" viewBox="0 0 640 480">
-  <defs>
-    <g id="nz-b">
-      <g id="nz-a">
-        <path d="M0-.3v.5l1-.5z"/>
-        <path d="M.2.3 0-.1l1-.2z"/>
-      </g>
-      <use xlink:href="#nz-a" transform="scale(-1 1)"/>
-      <use xlink:href="#nz-a" transform="rotate(72 0 0)"/>
-      <use xlink:href="#nz-a" transform="rotate(-72 0 0)"/>
-      <use xlink:href="#nz-a" transform="scale(-1 1)rotate(72)"/>
-    </g>
-  </defs>
-  <path fill="#00247d" fill-rule="evenodd" d="M0 0h640v480H0z"/>
-  <g transform="translate(-111 36.1)scale(.66825)">
-    <use xlink:href="#nz-b" width="100%" height="100%" fill="#fff" transform="translate(900 120)scale(45.4)"/>
-    <use xlink:href="#nz-b" width="100%" height="100%" fill="#cc142b" transform="matrix(30 0 0 30 900 120)"/>
-  </g>
-  <g transform="rotate(82 525.2 114.6)scale(.66825)">
-    <use xlink:href="#nz-b" width="100%" height="100%" fill="#fff" transform="rotate(-82 519 -457.7)scale(40.4)"/>
-    <use xlink:href="#nz-b" width="100%" height="100%" fill="#cc142b" transform="rotate(-82 519 -457.7)scale(25)"/>
-  </g>
-  <g transform="rotate(82 525.2 114.6)scale(.66825)">
-    <use xlink:href="#nz-b" width="100%" height="100%" fill="#fff" transform="rotate(-82 668.6 -327.7)scale(45.4)"/>
-    <use xlink:href="#nz-b" width="100%" height="100%" fill="#cc142b" transform="rotate(-82 668.6 -327.7)scale(30)"/>
-  </g>
-  <g transform="translate(-111 36.1)scale(.66825)">
-    <use xlink:href="#nz-b" width="100%" height="100%" fill="#fff" transform="translate(900 480)scale(50.4)"/>
-    <use xlink:href="#nz-b" width="100%" height="100%" fill="#cc142b" transform="matrix(35 0 0 35 900 480)"/>
-  </g>
-  <path fill="#012169" d="M0 0h320v240H0z"/>
-  <path fill="#fff" d="m37.5 0 122 90.5L281 0h39v31l-120 89.5 120 89V240h-40l-120-89.5L40.5 240H0v-30l119.5-89L0 32V0z"/>
-  <path fill="#c8102e" d="M212 140.5 320 220v20l-135.5-99.5zm-92 10 3 17.5-96 72H0zM320 0v1.5l-124.5 94 1-22L295 0zM0 0l119.5 88h-30L0 21z"/>
-  <path fill="#fff" d="M120.5 0v240h80V0zM0 80v80h320V80z"/>
-  <path fill="#c8102e" d="M0 96.5v48h320v-48zM136.5 0v240h48V0z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><clipPath id="nzCanton"><rect width="30" height="15"></rect></clipPath><rect width="60" height="30" fill="#012169"></rect><g clip-path="url(#nzCanton)"><g transform="scale(0.5)">
+  <clipPath id="ujcnz"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"></path></clipPath>
+  <rect width="60" height="30" fill="#012169"></rect>
+  <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"></path>
+  <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#ujcnz)" stroke="#C8102E" stroke-width="4"></path>
+  <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"></path>
+  <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"></path></g></g><polygon points="47.00,4.90 47.77,6.95 49.95,7.04 48.24,8.40 48.82,10.51 47.00,9.30 45.18,10.51 45.76,8.40 44.05,7.04 46.23,6.95" fill="#fff"></polygon><polygon points="47.00,5.80 47.54,7.25 49.09,7.32 47.88,8.29 48.29,9.78 47.00,8.92 45.71,9.78 46.12,8.29 44.91,7.32 46.46,7.25" fill="#CC142B"></polygon><polygon points="40.50,11.60 41.34,13.84 43.73,13.95 41.86,15.44 42.50,17.75 40.50,16.43 38.50,17.75 39.14,15.44 37.27,13.95 39.66,13.84" fill="#fff"></polygon><polygon points="40.50,12.50 41.12,14.15 42.88,14.23 41.50,15.32 41.97,17.02 40.50,16.05 39.03,17.02 39.50,15.32 38.12,14.23 39.88,14.15" fill="#CC142B"></polygon><polygon points="53.00,10.10 53.72,12.01 55.76,12.10 54.16,13.38 54.70,15.35 53.00,14.22 51.30,15.35 51.84,13.38 50.24,12.10 52.28,12.01" fill="#fff"></polygon><polygon points="53.00,11.00 53.49,12.32 54.90,12.38 53.80,13.26 54.18,14.62 53.00,13.84 51.82,14.62 52.20,13.26 51.10,12.38 52.51,12.32" fill="#CC142B"></polygon><polygon points="46.50,20.00 47.36,22.31 49.83,22.42 47.90,23.95 48.56,26.33 46.50,24.97 44.44,26.33 45.10,23.95 43.17,22.42 45.64,22.31" fill="#fff"></polygon><polygon points="46.50,20.90 47.14,22.62 48.97,22.70 47.54,23.84 48.03,25.60 46.50,24.59 44.97,25.60 45.46,23.84 44.03,22.70 45.86,22.62" fill="#CC142B"></polygon></svg>
