@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>전자입국신고서 안내 매뉴얼 · 현대드림투어</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/design-system.css">
+<style>
+  :root { --bg-page: #FAFAFA; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--bg-page);
+    color: var(--fg-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 64px 120px;
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--neutral-100);
+    margin-bottom: 56px;
+  }
+  .topbar img { height: 48px; }
+  .topbar .meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: var(--bg-tint-primary);
+    border: 1px solid var(--primary-100);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--primary-700);
+  }
+  .topbar .meta::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary-500);
+  }
+  .topbar .meta .meta-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--primary-500);
+    text-transform: uppercase;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 24px;
+    margin-bottom: 56px;
+    border-bottom: 1px solid var(--neutral-100);
+  }
+  .hero .hero-title { display: flex; flex-direction: column; gap: 16px; }
+  .hero .dept {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--neutral-800);
+    letter-spacing: -0.005em;
+    white-space: nowrap;
+    align-self: flex-end;
+  }
+  .hero .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    color: var(--primary-500);
+    text-transform: uppercase;
+  }
+  .hero .eyebrow::before {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: var(--primary-500);
+  }
+  .hero h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--neutral-900);
+  }
+  .hero h1 .accent { color: var(--primary-500); }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+  .section-head h2 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--neutral-900);
+  }
+  .section-head .label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--neutral-400);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid var(--neutral-100);
+    border-radius: 16px;
+    padding: 36px;
+    text-decoration: none;
+    color: inherit;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto 1fr auto;
+    column-gap: 32px;
+    transition: border-color 200ms ease-out, transform 200ms ease-out, box-shadow 200ms ease-out;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 0;
+    background: var(--primary-500);
+    transition: height 240ms ease-out;
+  }
+  .card:hover {
+    border-color: var(--neutral-200);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(30, 30, 30, 0.06);
+  }
+  .card:hover::after { height: 56px; }
+
+  .card .country-mark {
+    grid-column: 1;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--primary-500);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .card .big-code img.flag {
+    display: block;
+    width: 132px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(30,30,30,0.18);
+    outline: 1px solid rgba(30,30,30,0.06);
+  }
+  .card .big-code {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: end;
+  }
+  .card h3 {
+    grid-column: 1;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--neutral-900);
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+  .card .visa-en {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 14px;
+    color: var(--neutral-600);
+    font-weight: 400;
+    letter-spacing: -0.005em;
+  }
+  .card .footer-row {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--neutral-100);
+  }
+  .card .footer-row .left {
+    display: flex;
+    gap: 28px;
+    align-items: baseline;
+  }
+  .card .footer-row .kv {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .card .footer-row .kv .k {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: var(--neutral-400);
+    text-transform: uppercase;
+  }
+  .card .footer-row .kv .v {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--neutral-800);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Action chips row — open / print */
+  .card .actions {
+    grid-column: 1 / -1;
+    grid-row: 5;
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  .card .actions a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    background: var(--neutral-50);
+    color: var(--neutral-800);
+    border: 1px solid var(--neutral-100);
+    text-decoration: none;
+    transition: all 200ms ease-out;
+  }
+  .card .actions a:hover {
+    background: #fff;
+    border-color: var(--neutral-200);
+    color: var(--primary-700);
+  }
+  .card .actions a.primary {
+    background: var(--primary-50);
+    border-color: var(--primary-100);
+    color: var(--primary-700);
+  }
+  .card .actions a.primary:hover {
+    background: var(--primary-100);
+    color: var(--primary-700);
+  }
+
+  /* dark feature card for the leading manual */
+  .card.dark {
+    background: var(--neutral-900);
+    color: #fff;
+    border-color: var(--neutral-900);
+    grid-column: 1 / -1;
+  }
+  .card.dark::after { background: var(--secondary-500); }
+  .card.dark .country-mark { color: var(--secondary-100); }
+  .card.dark h3 { color: #fff; font-size: 32px; }
+  .card.dark .visa-en { color: rgba(255,255,255,0.6); }
+  .card.dark .big-code img.flag { width: 168px; }
+  .card.dark .footer-row { border-top-color: rgba(255,255,255,0.08); }
+  .card.dark .footer-row .kv .k { color: rgba(255,255,255,0.4); }
+  .card.dark .footer-row .kv .v { color: #fff; }
+  .card.dark .actions a {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.92);
+  }
+  .card.dark .actions a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+  .card.dark .actions a.primary {
+    background: var(--secondary-500);
+    border-color: var(--secondary-500);
+    color: #fff;
+  }
+  .card.dark .actions a.primary:hover { background: var(--secondary-300); border-color: var(--secondary-300); }
+
+  footer.page-footer {
+    margin-top: 96px;
+    padding-top: 40px;
+    border-top: 1px solid var(--neutral-100);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--neutral-400);
+    letter-spacing: 0.06em;
+  }
+  footer.page-footer .footer-credit {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: right;
+  }
+  footer.page-footer .slogan {
+    font-weight: 500;
+    color: var(--neutral-600);
+    letter-spacing: 0.08em;
+  }
+  @media (max-width: 768px) {
+    .page { padding: 32px 20px 72px; }
+    .hero { padding-bottom: 28px; margin-bottom: 36px; }
+    .hero h1 { font-size: 32px; line-height: 1.15; }
+    .grid { grid-template-columns: 1fr; gap: 16px; }
+    .card { padding: 24px 20px; }
+    .card.dark, .card[style*="grid-column"] { grid-column: 1 !important; }
+    .card .big-code img.flag { width: 96px; }
+    .card.dark .big-code img.flag { width: 110px; }
+    .card .footer-row { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .card .footer-row .left { flex-wrap: wrap; gap: 16px 28px; }
+    footer.page-footer { flex-direction: column; gap: 12px; align-items: flex-start; }
+    footer.page-footer .footer-credit { text-align: left; }
+  }
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="topbar">
+    <img src="assets/brand/logo-horizontal.png" alt="현대드림투어">
+    <span class="meta"><span class="meta-label">Last Update</span>2026. 07. 01.</span>
+  </div>
+
+  <div class="hero">
+    <div class="hero-title">
+      <div class="eyebrow">DIGITAL ARRIVAL CARD GUIDE</div>
+      <h1>해외 입국을 위한 <span class="accent">전자 입국 신고서</span> 안내 매뉴얼</h1>
+    </div>
+    <div class="dept">주관부서: 영업2팀</div>
+  </div>
+
+  <div class="section-head">
+    <h2>국가별 작성 매뉴얼</h2>
+    <span class="label">10 COUNTRIES</span>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="country-mark">TAIWAN</div>
+      <h3>대만 입국신고서(TWAC)<br>작성 매뉴얼</h3>
+      <div class="big-code"><img class="flag" src="assets/flags/tw.svg" alt="대만 국기"></div>
+      <div class="visa-en">Taiwan Arrival Card (TWAC)</div>
+      <div class="footer-row">
+        <div class="left">
+          <div class="kv"><span class="k">작성 방법</span><span class="v">웹사이트</span></div>
+          <div class="kv"><span class="k">제출 시기</span><span class="v">입국 7일 전</span></div>
+          <div class="kv"><span class="k">신청 비용</span><span class="v">무료</span></div>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="primary" href="decks/tw.html">매뉴얼 열기 →</a>
+        <a href="decks/tw-flat.html" target="_blank">인쇄 · PDF 저장</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="country-mark">MALAYSIA</div>
+      <h3>말레이시아 MDAC<br>작성 매뉴얼</h3>
+      <div class="big-code"><img class="flag" src="assets/flags/my.svg" alt="말레이시아 국기"></div>
+      <div class="visa-en">Malaysia Digital Arrival Card</div>
+      <div class="footer-row">
+        <div class="left">
+          <div class="kv"><span class="k">작성 방법</span><span class="v">웹사이트</span></div>
+          <div class="kv"><span class="k">제출 시기</span><span class="v">입국 3일 전</span></div>
+          <div class="kv"><span class="k">신청 비용</span><span class="v">무료</span></div>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="primary" href="decks/my.html">매뉴얼 열기 →</a>
+        <a href="decks/my-flat.html" target="_blank">인쇄 · PDF 저장</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="country-mark">SINGAPORE</div>
+      <h3>싱가포르 SGAC<br>작성 매뉴얼</h3>
+      <div class="big-code"><img class="flag" src="assets/flags/sg.svg" alt="싱가포르 국기"></div>
+      <div class="visa-en">SG Arrival Card</div>
+      <div class="footer-row">
+        <div class="left">
+          <div class="kv"><span class="k">작성 방법</span><span class="v">웹 · 앱</span></div>
+          <div class="kv"><span class="k">제출 시기</span><span class="v">입국 3일 전</span></div>
+          <div class="kv"><span class="k">신청 비용</span><span class="v">무료</span></div>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="primary" href="decks/sg.html">매뉴얼 열기 →</a>
+        <a href="decks/sg-flat.html" target="_blank">인쇄 · PDF 저장</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="country-mark">INDIA</div>
+      <h3>인도 e-Arrival Card<br>작성 매뉴얼</h3>
+      <div class="big-code"><img class="flag" src="assets/flags/in.svg" alt="인도 국기"></div>
+      <div class="visa-en">e-Arrival Card · ATITHI 세관 신고</div>
+      <div class="footer-row">
+        <div class="left">
+          <div class="kv"><span class="k">작성 방법</span><span class="v">웹 · 앱</span></div>
+          <div class="kv"><span class="k">제출 시기</span><span class="v">입국 72시간 전</span></div>
+          <div class="kv"><span class="k">신청 비용</span><span class="v">무료</span></div>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="primary" href="decks/in.html">매뉴얼 열기 →</a>
+        <a href="decks/in-flat.html" target="_blank">인쇄 · PDF 저장</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="country-mark">INDONESIA</div>
+      <h3>인도네시아 All Indonesia<br>작성 매뉴얼</h3>
+      <div class="big-code"><img class="flag" src="assets/flags/id.svg" alt="인도네시아 국기"></div>
+      <div class="visa-en">All Indonesia · 입국 · 세관 · 건강 통합 신고</div>
+      <div class="footer-row">
+        <div class="left">
+          <div class="kv"><span class="k">작성 방법</span><span class="v">앱 · 웹</span></div>
+          <div class="kv"><span class="k">제출 시기</span><span class="v">입국 3일 전</span></div>
+          <div class="kv"><span class="k">신청 비용</span><span class="v">무료</span></div>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="primary" href="decks/id.html">매뉴얼 열기 →</a>
+        <a href="decks/id-flat.html" target="_blank">인쇄 · PDF 저장</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="country-mark">JAPAN</div>
+      <h3>일본 Visit Japan Web<br>작성 매뉴얼</h3>
+      <div class="big-code"><img class="flag" src="assets/flags/jp.svg" alt="일본 국기"></div>
+      <div class="visa-en">Visit Japan Web · 입국 심사 · 세관 신고 QR</div>
+      <div class="footer-row">
+        <div class="left">
+          <div class="kv"><span class="k">작성 방법</span><span class="v">웹사이트</span></div>
+          <div class="kv"><span class="k">제출 시기</span><span class="v">입국 전 사전 등록</span></div>
+          <div class="kv"><span class="k">신청 비용</span><span class="v">무료</span></div>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="primary" href="decks/jp.html">매뉴얼 열기 →</a>
+        <a href="decks/jp-flat.html" target="_blank">인쇄 · PDF 저장</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="country-mark">CHINA</div>
+      <h3>중국 입국카드(Arrival Card)<br>작성 매뉴얼</h3>
+      <div class="big-code"><img class="flag" src="assets/flags/cn.svg" alt="중국 국기"></div>
+      <div class="visa-en">China Arrival Card · NIA 온라인 입국카드</div>
+      <div class="footer-row">
+        <div class="left">
+          <div class="kv"><span class="k">작성 방법</span><span class="v">웹 · 앱</span></div>
+          <div class="kv"><span class="k">제출 시기</span><span class="v">입국 전 사전 · 도착 시</span></div>
+          <div class="kv"><span class="k">신청 비용</span><span class="v">무료</span></div>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="primary" href="decks/cn.html">매뉴얼 열기 →</a>
+        <a href="decks/cn-flat.html" target="_blank">인쇄 · PDF 저장</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="country-mark">CAMBODIA</div>
+      <h3>캄보디아 e-Arrival<br>작성 매뉴얼</h3>
+      <div class="big-code"><img class="flag" src="assets/flags/kh.svg" alt="캄보디아 국기"></div>
+      <div class="visa-en">Cambodia e-Arrival</div>
+      <div class="footer-row">
+        <div class="left">
+          <div class="kv"><span class="k">작성 방법</span><span class="v">모바일 앱</span></div>
+          <div class="kv"><span class="k">제출 시기</span><span class="v">입국 7일 전</span></div>
+          <div class="kv"><span class="k">신청 비용</span><span class="v">무료</span></div>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="primary" href="decks/kh.html">매뉴얼 열기 →</a>
+        <a href="decks/kh-flat.html" target="_blank">인쇄 · PDF 저장</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="country-mark">THAILAND</div>
+      <h3>태국 TDAC<br>작성 매뉴얼</h3>
+      <div class="big-code"><img class="flag" src="assets/flags/th.svg" alt="태국 국기"></div>
+      <div class="visa-en">Thailand Digital Arrival Card</div>
+      <div class="footer-row">
+        <div class="left">
+          <div class="kv"><span class="k">작성 방법</span><span class="v">웹사이트</span></div>
+          <div class="kv"><span class="k">제출 시기</span><span class="v">입국 3일 전</span></div>
+          <div class="kv"><span class="k">신청 비용</span><span class="v">무료</span></div>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="primary" href="decks/th.html">매뉴얼 열기 →</a>
+        <a href="decks/th-flat.html" target="_blank">인쇄 · PDF 저장</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="country-mark">PHILIPPINES</div>
+      <h3>필리핀 eTravel<br>작성 매뉴얼</h3>
+      <div class="big-code"><img class="flag" src="assets/flags/ph.svg" alt="필리핀 국기"></div>
+      <div class="visa-en">eTravel · 건강 · 세관 통합 신고</div>
+      <div class="footer-row">
+        <div class="left">
+          <div class="kv"><span class="k">작성 방법</span><span class="v">웹 · 앱</span></div>
+          <div class="kv"><span class="k">제출 시기</span><span class="v">입국 72시간 전</span></div>
+          <div class="kv"><span class="k">신청 비용</span><span class="v">무료</span></div>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="primary" href="decks/ph.html">매뉴얼 열기 →</a>
+        <a href="decks/ph-flat.html" target="_blank">인쇄 · PDF 저장</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="page-footer">
+    <span class="slogan">FOR YOUR BETTER VALUE</span>
+    <span class="footer-credit">
+      <span>ⓒ HYUNDAI DREAMTOUR SALES 2 All rights reserved.</span>
+      <span>작성자: 양희건</span>
+    </span>
+  </footer>
+
+</div>
+
+</body>
+</html>

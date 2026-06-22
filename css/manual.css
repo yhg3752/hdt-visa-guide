@@ -462,7 +462,7 @@ h2.slide-title {
 }
 
 .cover-left {
-  padding: 80px 80px 96px;
+  padding: 80px 80px 80px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -485,6 +485,52 @@ h2.slide-title {
   font-size: 11.5px;
   color: var(--neutral-400);
   letter-spacing: 0;
+}
+
+/* 출처(공식 사이트·앱) 표기 */
+.cover-official {
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: var(--bg-tint-primary, #EAF6F4);
+  border: 1px solid var(--primary-100);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cover-official .src-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary-500);
+}
+.cover-official .src-row {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--neutral-800);
+  letter-spacing: -0.005em;
+}
+.cover-official .src-row a { color: var(--primary-700); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+.cover-official .src-row a:hover { color: var(--primary-500); }
+.cover-official .src-row .dim { color: var(--neutral-600); font-weight: 400; }
+
+/* 참고 안내문 리스트 */
+.cover-notes {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cover-notes li {
+  list-style: none;
+  font-size: 11.5px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--neutral-600);
+  letter-spacing: -0.005em;
+  word-break: keep-all;
 }
 
 .cover-eyebrow {

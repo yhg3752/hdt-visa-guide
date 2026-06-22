@@ -37,16 +37,37 @@ section.slide {
 /* All other styles inherit from manual.css */
 
 @media print {
+  html, body { background: #fff; }
   body {
-    padding: 0;
-    gap: 0;
-    background: #fff;
+    padding: 0 !important;
+    gap: 0 !important;
+    display: block !important;
+  }
+  /* 인쇄 용지를 A4 가로로 고정한다. 일부 브라우저가 PDF 저장 시 용지를 A4로 강제해도
+     우측 잘림이 없도록, 항상 A4 가로(297×210mm)를 기준으로 삼는다. 여백 0. */
+  @page { size: A4 landscape; margin: 0; }
+
+  /* flat-scale.js가 인쇄 직전 각 슬라이드를 .flat-slide-wrap으로 감싸고
+     A4 폭에 맞춘 --flat-scale / --flat-wrap-w/h 변수를 설정한다. */
+  .flat-slide-wrap {
+    width: var(--flat-wrap-w, 100%);
+    height: var(--flat-wrap-h, auto);
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    page-break-after: always;
+    break-after: page;
+  }
+  .flat-slide-wrap:last-child {
+    page-break-after: auto;
+    break-after: auto;
   }
   section.slide {
-    page-break-after: always;
+    transform: translate(var(--flat-offset-x, 0px), var(--flat-offset-y, 0px)) scale(var(--flat-scale, 0.585));
+    transform-origin: top left;
     box-shadow: none;
+    page-break-after: auto;
   }
-  @page { size: 1920px 1080px; margin: 0; }
 }
 
 
