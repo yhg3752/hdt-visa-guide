@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>비자 안내 매뉴얼 · 현대드림투어</title>
+<title>해외 출입국 사전 절차 안내 · 현대드림투어</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="css/design-system.css">
 <style>
@@ -14,6 +14,7 @@
     color: var(--fg-body);
     -webkit-font-smoothing: antialiased;
   }
+  a { color: inherit; }
 
   .page {
     max-width: 1280px;
@@ -21,59 +22,43 @@
     padding: 80px 64px 120px;
   }
 
+  /* ---------- topbar ---------- */
   .topbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 56px;
+    padding-bottom: 32px;
     border-bottom: 1px solid var(--neutral-100);
-    margin-bottom: 56px;
+    margin-bottom: 64px;
   }
   .topbar img { height: 48px; }
-  .topbar .meta {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 16px;
-    border-radius: 999px;
-    background: var(--bg-tint-primary);
-    border: 1px solid var(--primary-100);
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    color: var(--primary-700);
+  .topbar .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
   }
-  .topbar .meta::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--primary-500);
-  }
-  .topbar .meta .meta-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
+  .topbar .contact .slogan {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
     color: var(--primary-500);
     text-transform: uppercase;
   }
-
-  .hero {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-bottom: 24px;
-    margin-bottom: 56px;
-    border-bottom: 1px solid var(--neutral-100);
-  }
-  .hero .hero-title { display: flex; flex-direction: column; gap: 16px; }
-  .hero .dept {
-    font-size: 16px;
-    font-weight: 700;
+  .topbar .contact .tel {
+    font-size: 14px;
+    font-weight: 600;
     color: var(--neutral-800);
-    letter-spacing: -0.005em;
-    white-space: nowrap;
-    align-self: flex-end;
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- hero ---------- */
+  .hero {
+    display: block;
+    padding-bottom: 56px;
+    margin-bottom: 64px;
+    border-bottom: 1px solid var(--neutral-100);
   }
   .hero .eyebrow {
     display: inline-flex;
@@ -84,6 +69,7 @@
     letter-spacing: 0.16em;
     color: var(--primary-500);
     text-transform: uppercase;
+    margin-bottom: 24px;
   }
   .hero .eyebrow::before {
     content: "";
@@ -92,19 +78,57 @@
     background: var(--primary-500);
   }
   .hero h1 {
-    font-size: 56px;
+    font-size: 54px;
     font-weight: 700;
     letter-spacing: -0.03em;
-    line-height: 1.1;
+    line-height: 1.12;
     color: var(--neutral-900);
   }
   .hero h1 .accent { color: var(--primary-500); }
+  .hero .lede {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--neutral-600);
+    letter-spacing: -0.005em;
+    max-width: none;
+    margin-top: 24px;
+  }
+  .hero .lede strong { font-weight: 600; color: var(--neutral-800); }
 
+  /* hero stat rail */
+  .stat-rail {
+    display: flex;
+    gap: 40px;
+    margin-top: 32px;
+    grid-column: 1 / -1;
+    padding-top: 36px;
+    border-top: 1px solid var(--neutral-100);
+  }
+  .stat-rail .stat { display: flex; flex-direction: column; gap: 4px; }
+  .stat-rail .stat .num {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--neutral-900);
+    font-variant-numeric: tabular-nums;
+  }
+  .stat-rail .stat .num .unit { font-size: 18px; font-weight: 600; color: var(--neutral-400); margin-left: 2px; }
+  .stat-rail .stat .lab {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--neutral-600);
+    letter-spacing: 0.01em;
+  }
+  .stat-rail .stat .num.green { color: var(--primary-500); }
+  .stat-rail .divider { width: 1px; background: var(--neutral-100); }
+
+  /* ---------- section head ---------- */
   .section-head {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
   .section-head h2 {
     font-size: 22px;
@@ -120,195 +144,253 @@
     text-transform: uppercase;
   }
 
-  .grid {
+  /* ---------- gateway cards ---------- */
+  .gateways {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    margin-bottom: 88px;
   }
-
-  .card {
+  .gateway {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     background: #fff;
     border: 1px solid var(--neutral-100);
-    border-radius: 16px;
-    padding: 36px;
+    border-radius: 20px;
+    padding: 40px;
     text-decoration: none;
     color: inherit;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto 1fr auto;
-    column-gap: 32px;
-    transition: border-color 200ms ease-out, transform 200ms ease-out, box-shadow 200ms ease-out;
-    position: relative;
     overflow: hidden;
+    transition: border-color 200ms ease-out, transform 200ms ease-out, box-shadow 200ms ease-out;
   }
-  .card::after {
+  .gateway::after {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 4px;
-    height: 0;
+    top: 0; right: 0;
+    width: 4px; height: 0;
     background: var(--primary-500);
     transition: height 240ms ease-out;
   }
-  .card:hover {
+  .gateway:hover {
     border-color: var(--neutral-200);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(30, 30, 30, 0.06);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(30,30,30,0.08);
   }
-  .card:hover::after { height: 56px; }
+  .gateway:hover::after { height: 72px; }
+  .gateway.arrival::after { background: var(--secondary-500); }
 
-  .card .country-mark {
-    grid-column: 1;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    color: var(--primary-500);
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-  .card .big-code img.flag {
-    display: block;
-    width: 132px;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 1px 4px rgba(30,30,30,0.18);
-    outline: 1px solid rgba(30,30,30,0.06);
-  }
-  .card .big-code {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    font-size: 88px;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    line-height: 1;
-    color: var(--neutral-900);
-    align-self: center;
-    justify-self: end;
-  }
-  .card h3 {
-    grid-column: 1;
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: var(--neutral-900);
-    line-height: 1.25;
-    margin-bottom: 10px;
-  }
-  .card .visa-en {
-    grid-column: 1;
-    grid-row: 3;
-    font-size: 14px;
-    color: var(--neutral-600);
-    font-weight: 400;
-    letter-spacing: -0.005em;
-  }
-  .card .footer-row {
-    grid-column: 1 / -1;
-    grid-row: 4;
+  .gateway .g-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 28px;
-    padding-top: 24px;
-    border-top: 1px solid var(--neutral-100);
+    gap: 16px;
+    margin-bottom: 28px;
   }
-  .card .footer-row .left {
-    display: flex;
-    gap: 28px;
-    align-items: baseline;
-  }
-  .card .footer-row .kv {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .card .footer-row .kv .k {
-    font-size: 11px;
+  .gateway .g-kicker {
+    font-size: 12px;
     font-weight: 500;
-    letter-spacing: 0.12em;
-    color: var(--neutral-400);
+    letter-spacing: 0.16em;
+    color: var(--primary-500);
     text-transform: uppercase;
   }
-  .card .footer-row .kv .v {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--neutral-800);
-    font-variant-numeric: tabular-nums;
-  }
-  .card .footer-row .cta {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--primary-500);
-    letter-spacing: -0.005em;
+  .gateway.arrival .g-kicker { color: var(--secondary-500); }
+  .gateway .g-count {
     display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .card .footer-row .cta .arrow {
-    transition: transform 200ms ease-out;
-  }
-  .card:hover .footer-row .cta .arrow {
-    transform: translateX(4px);
-  }
-
-  /* Action chips row — open / print / pptx */
-  .card .actions {
-    grid-column: 1 / -1;
-    grid-row: 5;
-    display: flex;
-    gap: 12px;
-    margin-top: 16px;
-    flex-wrap: wrap;
-  }
-  .card .actions a {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 16px;
+    align-items: baseline;
+    gap: 4px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 6px 14px;
     border-radius: 999px;
-    font-size: 13px;
-    font-weight: 500;
+    background: var(--bg-tint-primary);
+    border: 1px solid var(--primary-100);
+  }
+  .gateway .g-count .n { font-size: 15px; font-weight: 700; color: var(--primary-700); font-variant-numeric: tabular-nums; }
+  .gateway .g-count .t { font-size: 12px; font-weight: 500; color: var(--primary-700); }
+  .gateway.arrival .g-count { background: #FBF1E0; border-color: #F0D9AE; }
+  .gateway.arrival .g-count .n, .gateway.arrival .g-count .t { color: #8A5400; }
+
+  .gateway h3 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.22;
+    color: var(--neutral-900);
+    margin-bottom: 10px;
+  }
+  .gateway .g-en {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--neutral-600);
+    letter-spacing: 0.01em;
+    margin-bottom: 22px;
+  }
+  .gateway .g-desc {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.66;
+    color: var(--neutral-600);
     letter-spacing: -0.005em;
-    background: var(--neutral-50);
-    color: var(--neutral-800);
-    border: 1px solid var(--neutral-100);
-    text-decoration: none;
-    transition: all 200ms ease-out;
+    margin-bottom: 28px;
   }
-  .card .actions a:hover {
+
+  /* flag strip */
+  .flag-strip {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    gap: 0;
+    margin-bottom: 28px;
+  }
+  .flag-strip img {
+    width: 44px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 4px;
+    outline: 1px solid rgba(30,30,30,0.08);
+    box-shadow: 0 1px 3px rgba(30,30,30,0.14);
+    margin-right: -8px;
     background: #fff;
-    border-color: var(--neutral-200);
-    color: var(--primary-700);
+    transition: transform 160ms ease-out;
   }
-  .card .actions a.primary {
-    background: var(--primary-50);
-    border-color: var(--primary-100);
-    color: var(--primary-700);
-  }
-  .card .actions a.primary:hover {
-    background: var(--primary-100);
-    color: var(--primary-700);
+  .gateway:hover .flag-strip img { transform: translateY(-2px); }
+  .flag-strip .more {
+    margin-left: 16px;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--neutral-400);
+    letter-spacing: 0.01em;
   }
 
-  /* dark feature card for the leading manual */
-  .card.dark {
-    background: var(--neutral-900);
+  .gateway .g-cta {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+    padding: 13px 24px;
+    border-radius: 10px;
+    background: var(--primary-500);
     color: #fff;
-    border-color: var(--neutral-900);
-    grid-column: 1 / -1;
-    grid-template-rows: auto 1fr auto auto;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    transition: background 120ms ease-out;
   }
-  .card.dark::after { background: var(--secondary-500); }
-  .card.dark .country-mark { color: var(--secondary-100); }
-  .card.dark h3 { color: #fff; }
-  .card.dark .visa-en { color: rgba(255,255,255,0.6); }
-  .card.dark .big-code { color: #fff; font-size: 140px; }
-  .card.dark .footer-row { border-top-color: rgba(255,255,255,0.08); }
-  .card.dark .footer-row .kv .k { color: rgba(255,255,255,0.4); }
-  .card.dark .footer-row .kv .v { color: #fff; }
-  .card.dark .footer-row .cta { color: var(--secondary-100); }
+  .gateway:hover .g-cta { background: var(--primary-700); }
+  .gateway.arrival .g-cta { background: var(--secondary-500); }
+  .gateway.arrival:hover .g-cta { background: #A85F00; }
+  .gateway .g-cta svg { width: 16px; height: 16px; }
 
+  /* ---------- compare ---------- */
+  .compare {
+    margin-bottom: 88px;
+  }
+  .compare-table {
+    background: #fff;
+    border: 1px solid var(--neutral-100);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .compare-table .row {
+    display: grid;
+    grid-template-columns: 0.8fr 1.6fr 1.6fr;
+    border-bottom: 1px solid var(--neutral-100);
+  }
+  .compare-table .row:last-child { border-bottom: none; }
+  .compare-table .row > div {
+    padding: 22px 28px;
+    font-size: 15px;
+    line-height: 1.55;
+    letter-spacing: -0.005em;
+  }
+  .compare-table .row .rh {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--neutral-400);
+    display: flex;
+    align-items: center;
+    background: var(--neutral-50);
+    border-right: 1px solid var(--neutral-100);
+  }
+  .compare-table .row .ca,
+  .compare-table .row .cb { color: var(--neutral-800); border-right: 1px solid var(--neutral-100); }
+  .compare-table .row .cb { border-right: none; }
+  .compare-table .row .ca strong,
+  .compare-table .row .cb strong { font-weight: 600; color: var(--neutral-900); }
+  .compare-table .head {
+    display: grid;
+    grid-template-columns: 0.8fr 1.6fr 1.6fr;
+    background: var(--neutral-900);
+  }
+  .compare-table .head > div {
+    padding: 20px 28px;
+    color: #fff;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .compare-table .head > div:last-child { border-right: none; }
+  .compare-table .head .spacer { background: transparent; }
+  .compare-table .head .th {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .compare-table .head .th .kr { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; }
+  .compare-table .head .th .en { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.55); letter-spacing: 0.02em; }
+  .compare-table .head .th .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--primary-500); margin-bottom: 6px; }
+  .compare-table .head .th.b .dot { background: var(--secondary-500); }
+
+  /* ---------- index ---------- */
+  .country-index { margin-bottom: 40px; }
+  .idx-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .idx-col h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--neutral-600);
+    padding-bottom: 16px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--neutral-100);
+  }
+  .idx-col h4 .tick { width: 8px; height: 8px; border-radius: 50%; background: var(--primary-500); }
+  .idx-col.b h4 .tick { background: var(--secondary-500); }
+  .idx-list { display: flex; flex-direction: column; }
+  .idx-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 120ms ease-out;
+  }
+  .idx-item:hover { background: var(--neutral-50); }
+  .idx-item img {
+    width: 30px; height: 20px;
+    object-fit: cover;
+    border-radius: 3px;
+    outline: 1px solid rgba(30,30,30,0.08);
+    flex-shrink: 0;
+  }
+  .idx-item .ko { font-size: 15px; font-weight: 500; color: var(--neutral-800); letter-spacing: -0.01em; }
+  .idx-item .sys { font-size: 12px; font-weight: 500; color: var(--neutral-400); margin-left: auto; letter-spacing: 0.02em; }
+  .idx-item .arrow { color: var(--neutral-400); transition: color 120ms ease-out, transform 160ms ease-out; }
+  .idx-item:hover .arrow { color: var(--primary-500); transform: translateX(2px); }
+
+  /* ---------- footer ---------- */
   footer.page-footer {
     margin-top: 96px;
     padding-top: 40px;
@@ -331,23 +413,22 @@
     color: var(--neutral-600);
     letter-spacing: 0.08em;
   }
-  @media (max-width: 768px) {
-    .page { padding: 32px 20px 72px; }
-    .hero { padding-bottom: 28px; margin-bottom: 36px; }
-    .hero h1 { font-size: 32px; line-height: 1.15; }
-    .grid { grid-template-columns: 1fr; gap: 16px; }
-    .card { padding: 24px 20px; }
-    .card[style*="grid-column"] { grid-column: 1 !important; }
-    .card .big-code { position: static; margin-bottom: 8px; }
-    .card .big-code img.flag { width: 96px; }
-    .card .footer-row { flex-direction: column; align-items: flex-start; gap: 14px; }
-    .card .footer-row .left { flex-wrap: wrap; gap: 16px 28px; }
-    .card .footer-row .cta { min-height: 44px; align-items: center; }
+
+  @media (max-width: 900px) {
+    .page { padding: 36px 22px 80px; }
+    .hero { padding-bottom: 36px; margin-bottom: 48px; }
+    .hero h1 { font-size: 34px; }
+    .hero .lede { max-width: none; }
+    .gateways { grid-template-columns: 1fr; margin-bottom: 64px; }
+    .idx-grid { grid-template-columns: 1fr; gap: 28px; }
+    .compare-table .row, .compare-table .head { grid-template-columns: 1fr; }
+    .compare-table .row .rh { border-right: none; }
+    .compare-table .row .ca, .compare-table .row .cb { border-right: none; border-top: 1px solid var(--neutral-100); }
+    .compare-table .head .spacer { display: none; }
+    .compare-table .head > div { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .stat-rail { flex-wrap: wrap; gap: 24px 32px; }
     footer.page-footer { flex-direction: column; gap: 12px; align-items: flex-start; }
     footer.page-footer .footer-credit { text-align: left; }
-  }
-  @media (max-width: 480px) {
-    .hero h1 { font-size: 26px; }
   }
 </style>
 </head>
@@ -357,121 +438,156 @@
 
   <div class="topbar">
     <img src="assets/brand/logo-horizontal.png" alt="현대드림투어">
-    <span class="meta"><span class="meta-label">Last Update</span>2026. 06. 01.</span>
+    <div class="contact">
+      <span class="slogan">For Your Better Value</span>
+      <span class="tel">고객센터 02-723-2233</span>
+    </div>
   </div>
 
+  <!-- HERO -->
   <div class="hero">
-    <div class="hero-title">
-      <div class="eyebrow">VISA APPLICATION GUIDE</div>
-      <h1>해외 입국을 위한 <span class="accent">전자 여행 허가</span> 안내 매뉴얼</h1>
+    <div class="hero-main">
+      <div class="eyebrow">PRE-TRAVEL ENTRY GUIDE</div>
+      <h1>해외 입국을 위한 <span class="accent">필수 사전 절차</span> 안내</h1>
+      <p class="lede">출국 전 반드시 준비해야 하는 <strong>전자여행허가</strong>와 <strong>전자입국신고서</strong>를 국가별로 안내합니다.</p>
     </div>
-    <div class="dept">주관부서: 영업2팀</div>
   </div>
 
+  <!-- GATEWAYS -->
   <div class="section-head">
-    <h2>국가별 신청 매뉴얼</h2>
-    <span class="label">5 COUNTRIES</span>
+    <h2>절차 유형 선택</h2>
+    <span class="label">SELECT A CATEGORY</span>
   </div>
 
-  <div class="grid">
+  <div class="gateways">
 
-    <div class="card">
-      <div class="country-mark">AUSTRALIA</div>
-      <h3>호주 ETA 신청 매뉴얼</h3>
-      <div class="big-code"><img class="flag" src="assets/flags/au.svg" alt="호주 국기"></div>
-      <div class="visa-en">Australia Electronic Travel Authority</div>
-      <div class="footer-row">
-        <div class="left">
-          <div class="kv"><span class="k">신청 방법</span><span class="v">모바일 앱</span></div>
-          <div class="kv"><span class="k">유효 기간</span><span class="v">1년</span></div>
-          <div class="kv"><span class="k">신청 비용</span><span class="v">$20 AUD</span></div>
-        </div>
+    <a class="gateway eta" href="전자여행허가 안내 매뉴얼.html">
+      <div class="g-top">
+        <span class="g-kicker">ELECTRONIC TRAVEL AUTHORIZATION</span>
+        <span class="g-count"><span class="n">5</span><span class="t">개국</span></span>
       </div>
-      <div class="actions">
-        <a class="primary" href="decks/au.html">매뉴얼 열기 →</a>
-        <a href="decks/au-flat.html" target="_blank">인쇄 · PDF 저장</a>
+      <h3>전자여행허가</h3>
+      <div class="g-en">ETA · eTA · ESTA</div>
+      <div class="g-desc">입국 자격을 <strong>출국 전 사전 승인</strong>받는 절차입니다. 미승인 시 항공기 탑승이 제한되므로 반드시 출발 전 발급받아야 합니다.</div>
+      <div class="flag-strip">
+        <img src="assets/flags/au.svg" alt="호주">
+        <img src="assets/flags/nz.svg" alt="뉴질랜드">
+        <img src="assets/flags/uk.svg" alt="영국">
+        <img src="assets/flags/ca.png" alt="캐나다">
+        <img src="assets/flags/us.svg" alt="미국">
+        <span class="more">호주 · 뉴질랜드 외 3개국</span>
+      </div>
+      <span class="g-cta">매뉴얼 바로가기
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </span>
+    </a>
+
+    <a class="gateway arrival" href="전자입국신고서 안내 매뉴얼.html">
+      <div class="g-top">
+        <span class="g-kicker">DIGITAL ARRIVAL CARD</span>
+        <span class="g-count"><span class="n">10</span><span class="t">개국</span></span>
+      </div>
+      <h3>전자입국신고서</h3>
+      <div class="g-en">Digital Arrival Card</div>
+      <div class="g-desc">입국 신고 정보를 <strong>도착 전 온라인으로 제출</strong>하는 절차입니다. 종이 신고서를 대체하며, 미제출 시 입국 심사가 지연될 수 있습니다.</div>
+      <div class="flag-strip">
+        <img src="assets/flags/jp.svg" alt="일본">
+        <img src="assets/flags/tw.svg" alt="대만">
+        <img src="assets/flags/th.svg" alt="태국">
+        <img src="assets/flags/sg.svg" alt="싱가포르">
+        <img src="assets/flags/my.svg" alt="말레이시아">
+        <span class="more">일본 · 대만 · 태국 · 싱가포르 등 10개국</span>
+      </div>
+      <span class="g-cta">매뉴얼 바로가기
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </span>
+    </a>
+
+  </div>
+
+  <!-- COMPARE -->
+  <div class="compare">
+    <div class="section-head">
+      <h2>두 절차의 차이</h2>
+      <span class="label">AT A GLANCE</span>
+    </div>
+    <div class="compare-table">
+      <div class="head">
+        <div class="spacer"></div>
+        <div class="th"><span class="dot"></span><span class="kr">전자여행허가</span><span class="en">ETA · eTA · ESTA</span></div>
+        <div class="th b"><span class="dot"></span><span class="kr">전자입국신고서</span><span class="en">Digital Arrival Card</span></div>
+      </div>
+      <div class="row">
+        <div class="rh">성격</div>
+        <div class="ca"><strong>입국 자격 사전 승인</strong></div>
+        <div class="cb"><strong>입국 신고 정보 제출</strong></div>
+      </div>
+      <div class="row">
+        <div class="rh">제출 시점</div>
+        <div class="ca">출국(탑승) 전 발급 완료</div>
+        <div class="cb">도착 전 (보통 입국 3~7일 전)</div>
+      </div>
+      <div class="row">
+        <div class="rh">대상 국가</div>
+        <div class="ca">호주 · 뉴질랜드 · 영국 · 캐나다 · 미국</div>
+        <div class="cb">일본 · 대만 · 태국 · 싱가포르 등 아시아 10개국</div>
+      </div>
+      <div class="row">
+        <div class="rh">미이행 시</div>
+        <div class="ca">항공기 <strong>탑승 거부</strong></div>
+        <div class="cb">입국 심사 <strong>지연 · 제한</strong></div>
+      </div>
+      <div class="row">
+        <div class="rh">비용</div>
+        <div class="ca">국가별 유료</div>
+        <div class="cb">대부분 무료</div>
       </div>
     </div>
+  </div>
 
-    <div class="card">
-      <div class="country-mark">NEW ZEALAND</div>
-      <h3>뉴질랜드 NZeTA 신청 매뉴얼</h3>
-      <div class="big-code"><img class="flag" src="assets/flags/nz.svg" alt="뉴질랜드 국기"></div>
-      <div class="visa-en">New Zealand Electronic Travel Authority</div>
-      <div class="footer-row">
-        <div class="left">
-          <div class="kv"><span class="k">신청 방법</span><span class="v">모바일 앱</span></div>
-          <div class="kv"><span class="k">유효 기간</span><span class="v">2년</span></div>
-          <div class="kv"><span class="k">신청 비용</span><span class="v">$117 NZD</span></div>
+  <!-- COUNTRY INDEX -->
+  <div class="country-index">
+    <div class="section-head">
+      <h2>전체 국가 바로가기</h2>
+      <span class="label">15 COUNTRIES</span>
+    </div>
+    <div class="idx-grid">
+
+      <div class="idx-col a">
+        <h4><span class="tick"></span>전자여행허가 · 5개국</h4>
+        <div class="idx-list">
+          <a class="idx-item" href="decks/au.html"><img src="assets/flags/au.svg" alt=""><span class="ko">호주</span><span class="sys">ETA</span><span class="arrow">→</span></a>
+          <a class="idx-item" href="decks/nz.html"><img src="assets/flags/nz.svg" alt=""><span class="ko">뉴질랜드</span><span class="sys">NZeTA</span><span class="arrow">→</span></a>
+          <a class="idx-item" href="decks/uk.html"><img src="assets/flags/uk.svg" alt=""><span class="ko">영국</span><span class="sys">ETA</span><span class="arrow">→</span></a>
+          <a class="idx-item" href="decks/ca.html"><img src="assets/flags/ca.png" alt=""><span class="ko">캐나다</span><span class="sys">eTA</span><span class="arrow">→</span></a>
+          <a class="idx-item" href="decks/us.html"><img src="assets/flags/us.svg" alt=""><span class="ko">미국</span><span class="sys">ESTA</span><span class="arrow">→</span></a>
         </div>
       </div>
-      <div class="actions">
-        <a class="primary" href="decks/nz.html">매뉴얼 열기 →</a>
-        <a href="decks/nz-flat.html" target="_blank">인쇄 · PDF 저장</a>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="country-mark">UNITED KINGDOM</div>
-      <h3>영국 ETA 신청 매뉴얼</h3>
-      <div class="big-code"><img class="flag" src="assets/flags/uk.svg" alt="영국 국기"></div>
-      <div class="visa-en">UK Electronic Travel Authorisation</div>
-      <div class="footer-row">
-        <div class="left">
-          <div class="kv"><span class="k">신청 방법</span><span class="v">웹사이트</span></div>
-          <div class="kv"><span class="k">유효 기간</span><span class="v">2년</span></div>
-          <div class="kv"><span class="k">신청 비용</span><span class="v">£20 GBP</span></div>
+      <div class="idx-col b">
+        <h4><span class="tick"></span>전자입국신고서 · 10개국</h4>
+        <div class="idx-list">
+          <a class="idx-item" href="decks/tw.html"><img src="assets/flags/tw.svg" alt=""><span class="ko">대만</span><span class="sys">TWAC</span><span class="arrow">→</span></a>
+          <a class="idx-item" href="decks/my.html"><img src="assets/flags/my.svg" alt=""><span class="ko">말레이시아</span><span class="sys">MDAC</span><span class="arrow">→</span></a>
+          <a class="idx-item" href="decks/sg.html"><img src="assets/flags/sg.svg" alt=""><span class="ko">싱가포르</span><span class="sys">SGAC</span><span class="arrow">→</span></a>
+          <a class="idx-item" href="decks/in.html"><img src="assets/flags/in.svg" alt=""><span class="ko">인도</span><span class="sys">e-Arrival</span><span class="arrow">→</span></a>
+          <a class="idx-item" href="decks/id.html"><img src="assets/flags/id.svg" alt=""><span class="ko">인도네시아</span><span class="sys">e-CD</span><span class="arrow">→</span></a>
+          <a class="idx-item" href="decks/jp.html"><img src="assets/flags/jp.svg" alt=""><span class="ko">일본</span><span class="sys">Visit Japan Web</span><span class="arrow">→</span></a>
+          <a class="idx-item" href="decks/cn.html"><img src="assets/flags/cn.svg" alt=""><span class="ko">중국</span><span class="sys">Arrival Card</span><span class="arrow">→</span></a>
+          <a class="idx-item" href="decks/kh.html"><img src="assets/flags/kh.svg" alt=""><span class="ko">캄보디아</span><span class="sys">e-Arrival</span><span class="arrow">→</span></a>
+          <a class="idx-item" href="decks/th.html"><img src="assets/flags/th.svg" alt=""><span class="ko">태국</span><span class="sys">TDAC</span><span class="arrow">→</span></a>
+          <a class="idx-item" href="decks/ph.html"><img src="assets/flags/ph.svg" alt=""><span class="ko">필리핀</span><span class="sys">eTravel</span><span class="arrow">→</span></a>
         </div>
       </div>
-      <div class="actions">
-        <a class="primary" href="decks/uk.html">매뉴얼 열기 →</a>
-        <a href="decks/uk-flat.html" target="_blank">인쇄 · PDF 저장</a>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="country-mark">CANADA</div>
-      <h3>캐나다 eTA 신청 매뉴얼</h3>
-      <div class="big-code"><img class="flag" src="assets/flags/ca.png" alt="캐나다 국기"></div>
-      <div class="visa-en">Canada Electronic Travel Authorization</div>
-      <div class="footer-row">
-        <div class="left">
-          <div class="kv"><span class="k">신청 방법</span><span class="v">웹사이트</span></div>
-          <div class="kv"><span class="k">유효 기간</span><span class="v">5년</span></div>
-          <div class="kv"><span class="k">신청 비용</span><span class="v">$7 CAD</span></div>
-        </div>
-      </div>
-      <div class="actions">
-        <a class="primary" href="decks/ca.html">매뉴얼 열기 →</a>
-        <a href="decks/ca-flat.html" target="_blank">인쇄 · PDF 저장</a>
-      </div>
     </div>
-
-    <div class="card" style="grid-column: 1 / -1;">
-      <div class="country-mark">UNITED STATES</div>
-      <h3>미국 ESTA 신청 매뉴얼</h3>
-      <div class="big-code"><img class="flag" src="assets/flags/us.svg" alt="미국 국기"></div>
-      <div class="visa-en">Electronic System for Travel Authorization</div>
-      <div class="footer-row">
-        <div class="left">
-          <div class="kv"><span class="k">신청 방법</span><span class="v">웹사이트</span></div>
-          <div class="kv"><span class="k">유효 기간</span><span class="v">2년</span></div>
-          <div class="kv"><span class="k">신청 비용</span><span class="v">$40 USD</span></div>
-        </div>
-      </div>
-      <div class="actions">
-        <a class="primary" href="decks/us.html">매뉴얼 열기 →</a>
-        <a href="decks/us-flat.html" target="_blank">인쇄 · PDF 저장</a>
-      </div>
-    </div>
-
   </div>
 
   <footer class="page-footer">
     <span class="slogan">FOR YOUR BETTER VALUE</span>
     <span class="footer-credit">
       <span>ⓒ HYUNDAI DREAMTOUR SALES 2 All rights reserved.</span>
-      <span>작성자: 양희건</span>
+      <span>주관부서: 영업2팀 · 작성자: 양희건</span>
     </span>
   </footer>
 
