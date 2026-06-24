@@ -21,6 +21,22 @@
     padding: 80px 64px 120px;
   }
 
+  .crumbs { margin-bottom: 36px; }
+  .crumb-nav { display: inline-flex; align-items: center; gap: 12px; }
+  .crumb-home {
+    display: inline-flex; align-items: center; gap: 9px;
+    height: 42px; padding: 0 20px 0 16px; border-radius: 999px;
+    background: #fff; border: 1px solid var(--neutral-200);
+    font-size: 14px; font-weight: 600; letter-spacing: -0.01em; color: var(--neutral-900);
+    text-decoration: none;
+    transition: background .15s ease, box-shadow .15s ease, transform .15s ease, border-color .15s ease;
+  }
+  .crumb-home:hover { box-shadow: 0 4px 14px rgba(30,30,30,0.10); transform: translateY(-1px); border-color: var(--neutral-300, #BFBFBC); }
+  .crumb-home svg { width: 16px; height: 16px; }
+  .crumb-sep { color: var(--neutral-300, #BFBFBC); display: inline-flex; }
+  .crumb-sep svg { width: 15px; height: 15px; }
+  .crumb-cur { font-size: 14px; color: var(--neutral-500, #8C8C88); font-weight: 500; letter-spacing: -0.01em; }
+
   .topbar {
     display: flex;
     align-items: center;
@@ -354,6 +370,17 @@
 <body>
 
 <div class="page">
+
+  <nav class="crumbs" aria-label="페이지 위치">
+    <span class="crumb-nav">
+      <a class="crumb-home" href="index.html">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.2L8 2.6l5.5 4.6"/><path d="M4 6.4V13h8V6.4"/></svg>
+        전체 안내
+      </a>
+      <span class="crumb-sep"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l5 5-5 5"/></svg></span>
+      <span class="crumb-cur">전자여행허가</span>
+    </span>
+  </nav>
 
   <div class="topbar">
     <img src="assets/brand/logo-horizontal.png" alt="현대드림투어">

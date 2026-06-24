@@ -29,7 +29,7 @@
 
     var a = document.createElement('a');
     a.id = 'back-to-index';
-    a.href = '../index.html';
+    a.href = '../전자여행허가%20안내%20매뉴얼.html';
     a.setAttribute('data-noncommentable', '');
     a.setAttribute('aria-label', '목차로 돌아가기');
     a.innerHTML =
